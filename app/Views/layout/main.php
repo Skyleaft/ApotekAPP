@@ -40,7 +40,7 @@
             <!-- LOGO -->
             <div class="topbar-left">
                 <div class="text-center">
-                    <a href="index.html" class="logo"><i class="mdi mdi-assistant"></i> Annex</a>
+                    <a href="<?= site_url('layout/index') ?>" class="logo"><i class="mdi mdi-assistant"></i> Annex</a>
                     <!-- <a href="index.html" class="logo"><img src="<?= base_url() ?>/assets/images/logo.png" height="24" alt="logo"></a> -->
                 </div>
             </div>
@@ -48,25 +48,7 @@
             <div class="sidebar-inner slimscrollleft">
 
                 <div id="sidebar-menu">
-                    <ul>
-                        <li class="menu-title">Main</li>
-                        <li>
-                            <a href="index.html" class="waves-effect">
-                                <i class="mdi mdi-airplay"></i>
-                                <span> Beranda <span class="badge badge-pill badge-primary float-right">7</span></span>
-                            </a>
-                        </li>
-
-                        <li class="has_sub">
-                            <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-layers"></i> <span> Master Data </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
-                            <ul class="list-unstyled">
-                                <li><a href="advanced-highlight.html">Data Obat</a></li>
-                                <li><a href="advanced-rating.html">Data Pegawai</a></li>
-                                <li><a href="advanced-alertify.html">Data Pelanggan</a></li>
-                            </ul>
-                        </li>
-
-                    </ul>
+                    <?= $this->renderSection('menu') ?>
                 </div>
                 <div class="clearfix"></div>
             </div> <!-- end sidebarinner -->
@@ -104,11 +86,6 @@
                                         <p class="notify-details"><b>Thomas J. Mimms</b><small class="text-muted">You have 87 unread messages</small></p>
                                     </a>
 
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                        <div class="notify-icon"><img src="<?= base_url() ?>/assets/images/users/avatar-4.jpg" alt="user-img" class="img-fluid rounded-circle" /> </div>
-                                        <p class="notify-details"><b>Luis M. Konrad</b><small class="text-muted">It is a long established fact that a reader will</small></p>
-                                    </a>
 
                                     <!-- All-->
                                     <a href="javascript:void(0);" class="dropdown-item notify-item">
@@ -165,9 +142,7 @@
                                         <h5>Welcome</h5>
                                     </div>
                                     <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle m-r-5 text-muted"></i> Profile</a>
-                                    <a class="dropdown-item" href="#"><i class="mdi mdi-wallet m-r-5 text-muted"></i> My Wallet</a>
                                     <a class="dropdown-item" href="#"><span class="badge badge-success float-right">5</span><i class="mdi mdi-settings m-r-5 text-muted"></i> Settings</a>
-                                    <a class="dropdown-item" href="#"><i class="mdi mdi-lock-open-outline m-r-5 text-muted"></i> Lock screen</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="#"><i class="mdi mdi-logout m-r-5 text-muted"></i> Logout</a>
                                 </div>
@@ -200,9 +175,7 @@
 
                     <div class="container-fluid">
 
-                        <div class="row">
-                            <?= $this->renderSection('content') ?>
-                        </div>
+                        <?= $this->renderSection('content') ?>
                         <!-- end page title end breadcrumb -->
 
                     </div><!-- container -->
