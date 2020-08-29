@@ -21,47 +21,53 @@
 <div class="col-sm-12">
     <div class="card m-b-30">
         <div class="card-body table-responsive">
-            <p class="card-text">
-                <table class="table" id="datapegawai">
-                    <thead>
-                        <tr>
-                            <th>No</th>
-                            <th>Nomor KTP</th>
-                            <th>Nama</th>
-                            <th>Jenis Kelamin</th>
-                            <th>Tanggal Lahir</th>
-                            <th>Alamat</th>
-                            <th>No.Telepon</th>
-                        </tr>
-                    </thead>
+            <div class="card-title">
+                <button class="btn btn-primary btn-sm tambah">
+                    <i class="fa fa-plus-circle"></i> Tambah Data
+                </button>
+            </div>
+            <p class="card-text viewdata">
 
-                    <tbody>
-                        <?php $nomor = 0;
-                        foreach ($showdata as $row) :
-                            $nomor++;
-                        ?>
-                            <tr>
-                                <td><?= $nomor ?></td>
-                                <td><?= $row['no_ktp'] ?></td>
-                                <td><?= $row['nama'] ?></td>
-                                <td><?= $row['jenis_kelamin'] ?></td>
-                                <td><?= $row['tgl_lahir'] ?></td>
-                                <td><?= $row['alamat'] ?></td>
-                                <td><?= $row['no_telp'] ?></td>
-                            </tr>
-
-                        <?php endforeach; ?>
-                    </tbody>
-                </table>
+            </p>
         </div>
     </div>
 </div>
+
+<div class="viewmodal" style="display: none;"></div>
 </div>
 </div>
 
 <script type="text/javascript">
+    function datapegawai() {
+        $.ajax({
+            url: "<?= site_url('pegawai/ambildata') ?>",
+            dataType: "json",
+            success: function(response) {
+                $('.viewdata').html(response.data);
+            },
+            error: function(xhr, ajaxOptions, thorwnError) {
+                alert(xhr.status + "\n" + xhr.responseText + "\n" + thorwnError);
+            },
+        });
+    }
+
     $(document).ready(function() {
-        $('#datapegawai').DataTable();
+        datapegawai();
+
+        $('.tambah').click(function(e) {
+            $.ajax({
+                url: "<?= site_url('pegawai/formtambah') ?>",
+                dataType: "json",
+                success: function(response) {
+                    $('.viewmodal').html(response.data).show();
+
+                    $('#modaltambah').modal('show');
+                },
+                error: function(xhr, ajaxOptions, thorwnError) {
+                    alert(xhr.status + "\n" + xhr.responseText + "\n" + thorwnError);
+                }
+            });
+        });
     });
 </script>
 
