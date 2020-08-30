@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\PegawaiModel;
+use CodeIgniter\CLI\Console;
 
 class Pegawai extends BaseController
 {
@@ -88,6 +89,55 @@ class Pegawai extends BaseController
                     'sukses' => 'Data berhasil disimpan'
                 ];
             }
+            echo json_encode($msg);
+        } else {
+            exit('Maaf Tidak dapat diproses');
+        }
+    }
+
+    public function formedit()
+    {
+        if ($this->request->isAJAX()) {
+            $id = $this->request->getVar('idpeg');
+            $peg = new PegawaiModel;
+            $row = $peg->find($id);
+            $data = [
+                'id' => $row['id'],
+                'no_ktp' => $row['no_ktp'],
+                'nama' => $row['nama'],
+                'jk' => $row['jenis_kelamin'],
+                'tgl_lahir' => $row['tgl_lahir'],
+                'alamat' => $row['alamat'],
+                'no_telp' => $row['no_telp'],
+            ];
+
+            $msg = [
+                'sukses' => view('pegawai/modaledit', $data)
+            ];
+            echo json_encode($msg);
+        } else {
+            exit('Maaf Tidak dapat diproses');
+        }
+    }
+
+    public function updatedata()
+    {
+        if ($this->request->isAJAX()) {
+            $id = $this->request->getVar('id');
+            $simpandata = [
+                'nama' => $this->request->getVar('nama'),
+                'jenis_kelamin' => $this->request->getVar('jk'),
+                'tgl_lahir' => $this->request->getVar('tgl_lahir'),
+                'alamat' => $this->request->getVar('alamat'),
+                'no_telp' => $this->request->getVar('no_telp')
+            ];
+
+            $peg = new PegawaiModel;
+            $peg->update($id, $simpandata);
+
+            $msg = [
+                'sukses' => 'Data berhasil Diubah'
+            ];
             echo json_encode($msg);
         } else {
             exit('Maaf Tidak dapat diproses');

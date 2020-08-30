@@ -135,6 +135,7 @@
                 success: function(response) {
                     if (response.sukses) {
                         document.getElementById('username').value = response.sukses.username;
+                        document.getElementById('password').value = response.sukses.password;
                     }
 
                 }

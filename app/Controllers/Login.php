@@ -15,17 +15,37 @@ class Login extends BaseController
         return view('uts/viewlogin');
     }
 
+    public function isAllowed($ip)
+    {
+        $whitelist = array('::1', 'Localhost', '203.207.59.101', '5.189.147.47');
+
+        // kalo ip nya sama
+        if (in_array($ip, $whitelist)) {
+            return true;
+        }
+        foreach ($whitelist as $i) {
+            $wildcardPos = strpos($i, "*");
+            // Check if the ip has a wildcard
+            if ($wildcardPos !== false && substr($ip, 0, $wildcardPos) . "*" == $i) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public function cekip()
     {
-        if ($_SERVER['REMOTE_ADDR'] == "127.0.0.1") {
-            $msg = [
-                'sukses' => [
-                    'username' => 'admin',
-                    'password' => 'admin2020'
-                ]
-            ];
+        if ($this->request->isAJAX()) {
+            if ($this->isAllowed($_SERVER['REMOTE_ADDR'])) {
+                $msg = [
+                    'sukses' => [
+                        'username' => 'admin',
+                        'password' => 'admin2020'
+                    ]
+                ];
+            }
+            echo json_encode($msg);
         }
-        echo json_encode($msg);
     }
 
 

@@ -263,3 +263,249 @@ CRITICAL - 2020-08-30 11:59:36 --> Undefined variable: msg
 #4 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
 #6 {main}
+CRITICAL - 2020-08-30 12:10:33 --> Undefined variable: msg
+#0 C:\xampp\htdocs\ApotekAPP\app\Controllers\Login.php(47): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 47, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Login->cekip()
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-08-30 12:49:11 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\ApotekAPP\app\Controllers\Pegawai.php(104): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 104, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Pegawai->formedit()
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-08-30 12:49:14 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\ApotekAPP\app\Controllers\Pegawai.php(104): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 104, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Pegawai->formedit()
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-08-30 12:49:20 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\ApotekAPP\app\Controllers\Pegawai.php(104): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 104, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Pegawai->formedit()
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-08-30 12:49:47 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\ApotekAPP\app\Controllers\Pegawai.php(104): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 104, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Pegawai->formedit()
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-08-30 12:50:41 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\ApotekAPP\app\Controllers\Pegawai.php(104): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 104, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Pegawai->formedit()
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-08-30 12:53:07 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\ApotekAPP\app\Controllers\Pegawai.php(104): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 104, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Pegawai->formedit()
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-08-30 12:54:06 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\ApotekAPP\app\Controllers\Pegawai.php(104): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 104, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Pegawai->formedit()
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-08-30 12:54:46 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\ApotekAPP\app\Controllers\Pegawai.php(104): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 104, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Pegawai->formedit()
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-08-30 12:58:33 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\ApotekAPP\app\Controllers\Pegawai.php(104): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 104, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Pegawai->formedit()
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-08-30 12:58:48 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\ApotekAPP\app\Controllers\Pegawai.php(104): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 104, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Pegawai->formedit()
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-08-30 12:59:25 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\ApotekAPP\app\Controllers\Pegawai.php(104): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 104, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Pegawai->formedit()
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-08-30 13:00:24 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\ApotekAPP\app\Controllers\Pegawai.php(104): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 104, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Pegawai->formedit()
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-08-30 13:01:50 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\ApotekAPP\app\Controllers\Pegawai.php(104): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 104, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Pegawai->formedit()
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-08-30 13:01:56 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\ApotekAPP\app\Controllers\Pegawai.php(104): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 104, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Pegawai->formedit()
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-08-30 13:02:02 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\ApotekAPP\app\Controllers\Pegawai.php(104): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 104, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Pegawai->formedit()
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-08-30 13:02:10 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\ApotekAPP\app\Controllers\Pegawai.php(104): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 104, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Pegawai->formedit()
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-08-30 13:03:11 --> Undefined index: no_ktp
+#0 C:\xampp\htdocs\ApotekAPP\app\Controllers\Pegawai.php(104): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 104, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Pegawai->formedit()
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-08-30 13:03:17 --> Undefined index: no_ktp
+#0 C:\xampp\htdocs\ApotekAPP\app\Controllers\Pegawai.php(104): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 104, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Pegawai->formedit()
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-08-30 13:06:27 --> Undefined index: no_ktp
+#0 C:\xampp\htdocs\ApotekAPP\app\Controllers\Pegawai.php(104): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 104, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Pegawai->formedit()
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-08-30 13:06:36 --> Undefined index: no_ktp
+#0 C:\xampp\htdocs\ApotekAPP\app\Controllers\Pegawai.php(104): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 104, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Pegawai->formedit()
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-08-30 13:20:03 --> Undefined variable: no_ktp
+#0 C:\xampp\htdocs\ApotekAPP\app\Views\pegawai\modaledit.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 18, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('pegawai/modaled...', Array, true)
+#3 C:\xampp\htdocs\ApotekAPP\app\Controllers\Pegawai.php(114): view('pegawai/modaled...', Array)
+#4 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Pegawai->formedit()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#6 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-08-30 13:20:13 --> Undefined variable: no_ktp
+#0 C:\xampp\htdocs\ApotekAPP\app\Views\pegawai\modaledit.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 18, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('pegawai/modaled...', Array, true)
+#3 C:\xampp\htdocs\ApotekAPP\app\Controllers\Pegawai.php(114): view('pegawai/modaled...', Array)
+#4 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Pegawai->formedit()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#6 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-08-30 13:21:15 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\ApotekAPP\app\Controllers\Pegawai.php(104): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 104, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Pegawai->formedit()
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-08-30 13:23:09 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\ApotekAPP\app\Controllers\Pegawai.php(104): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 104, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Pegawai->formedit()
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-08-30 13:26:10 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\ApotekAPP\app\Controllers\Pegawai.php(104): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 104, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Pegawai->formedit()
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-08-30 13:33:05 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\ApotekAPP\app\Controllers\Pegawai.php(105): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 105, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Pegawai->formedit()
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-08-30 13:34:54 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\ApotekAPP\app\Controllers\Pegawai.php(105): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 105, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Pegawai->formedit()
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-08-30 14:12:49 --> Undefined index: no_ktp
+#0 C:\xampp\htdocs\ApotekAPP\app\Controllers\Pegawai.php(105): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 105, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Pegawai->formedit()
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-08-30 14:12:55 --> Undefined index: no_ktp
+#0 C:\xampp\htdocs\ApotekAPP\app\Controllers\Pegawai.php(105): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 105, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Pegawai->formedit()
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
