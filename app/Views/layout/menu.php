@@ -4,7 +4,7 @@
 <ul>
     <li class="menu-title">Main</li>
     <li>
-        <a href="<?= site_url('layout/index') ?>" class="waves-effect">
+        <a href="<?= site_url('panel') ?>" class="waves-effect">
             <i class="mdi mdi-airplay"></i>
             <span> Beranda</span>
         </a>

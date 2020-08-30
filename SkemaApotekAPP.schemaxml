@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemadesigner version="6.5">
+<source>
+<database charset="utf8mb4" collation="utf8mb4_general_ci">db_apotek</database>
+</source>
+<canvas zoom="100">
+<tables>
+<table name="detail_penjualan" view="colnames">
+<left>265</left>
+<top>39</top>
+<width>98</width>
+<height>146</height>
+<sql_create_table>CREATE TABLE `detail_penjualan` (
+  `no_struk` varchar(255) DEFAULT NULL,
+  `id_obat` int(11) DEFAULT NULL,
+  `qty` int(11) DEFAULT NULL,
+  `sub_total` double DEFAULT NULL,
+  KEY `no_struk` (`no_struk`) USING BTREE,
+  KEY `id_obat` (`id_obat`),
+  CONSTRAINT `detail_penjualan_ibfk_1` FOREIGN KEY (`no_struk`) REFERENCES `penjualan` (`no_struk`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `detail_penjualan_ibfk_2` FOREIGN KEY (`id_obat`) REFERENCES `obat` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=DYNAMIC</sql_create_table>
+</table>
+<table name="levels" view="colnames">
+<left>732</left>
+<top>448</top>
+<width>78</width>
+<height>112</height>
+<sql_create_table>CREATE TABLE `levels` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nama` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4</sql_create_table>
+</table>
+<table name="obat" view="colnames">
+<left>93</left>
+<top>191</top>
+<width>123</width>
+<height>164</height>
+<sql_create_table>CREATE TABLE `obat` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nama` varchar(255) DEFAULT NULL,
+  `satuan` varchar(255) DEFAULT NULL,
+  `harga` double DEFAULT NULL,
+  `stok` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=497 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=DYNAMIC</sql_create_table>
+</table>
+<table name="pegawai" view="colnames">
+<left>705</left>
+<top>167</top>
+<width>125</width>
+<height>197</height>
+<sql_create_table>CREATE TABLE `pegawai` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `no_ktp` varchar(255) DEFAULT NULL,
+  `nama` varchar(255) DEFAULT NULL,
+  `jenis_kelamin` enum('L','P') DEFAULT NULL,
+  `tgl_lahir` date DEFAULT NULL,
+  `alamat` varchar(255) DEFAULT NULL,
+  `no_telp` varchar(255) DEFAULT NULL,
+  `iduser` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  KEY `iduser` (`iduser`),
+  CONSTRAINT `pegawai_ibfk_1` FOREIGN KEY (`iduser`) REFERENCES `users` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=DYNAMIC</sql_create_table>
+</table>
+<table name="pelanggan" view="colnames">
+<left>223</left>
+<top>381</top>
+<width>125</width>
+<height>163</height>
+<sql_create_table>CREATE TABLE `pelanggan` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nama` varchar(255) DEFAULT NULL,
+  `jenis_kelamin` enum('L','P') DEFAULT NULL,
+  `alamat` varchar(255) DEFAULT NULL,
+  `no_telp` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=DYNAMIC</sql_create_table>
+</table>
+<table name="penjualan" view="colnames">
+<left>473</left>
+<top>99</top>
+<width>126</width>
+<height>197</height>
+<sql_create_table>CREATE TABLE `penjualan` (
+  `no_struk` varchar(255) NOT NULL,
+  `tgl_pembelian` varchar(255) DEFAULT NULL,
+  `total` varchar(255) DEFAULT NULL,
+  `tunai` varchar(255) DEFAULT NULL,
+  `kembalian` varchar(255) DEFAULT NULL,
+  `id_pegawai` int(11) DEFAULT NULL,
+  `id_pelanggan` int(11) DEFAULT NULL,
+  PRIMARY KEY (`no_struk`) USING BTREE,
+  KEY `id_pegawai` (`id_pegawai`) USING BTREE,
+  KEY `penjualan_ibfk_2` (`id_pelanggan`),
+  CONSTRAINT `penjualan_ibfk_1` FOREIGN KEY (`id_pegawai`) REFERENCES `pegawai` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `penjualan_ibfk_2` FOREIGN KEY (`id_pelanggan`) REFERENCES `pelanggan` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=DYNAMIC</sql_create_table>
+</table>
+<table name="users" view="colnames">
+<left>506</left>
+<top>401</top>
+<width>103</width>
+<height>163</height>
+<sql_create_table>CREATE TABLE `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `idlevel` int(11) DEFAULT NULL,
+  `foto` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `idlevel` (`idlevel`),
+  CONSTRAINT `users_ibfk_1` FOREIGN KEY (`idlevel`) REFERENCES `levels` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4</sql_create_table>
+</table>
+</tables>
+</canvas>
+</schemadesigner>

@@ -23,7 +23,7 @@
         <div class="card-body table-responsive">
             <div class="card-title">
                 <button class="btn btn-primary btn-sm tambah">
-                    <i class="fa fa-plus-circle"></i> Tambah Data
+                    <i class="fas fa-plus-circle"></i> Tambah Data
                 </button>
             </div>
             <p class="card-text viewdata">

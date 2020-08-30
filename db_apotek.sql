@@ -17,18 +17,7 @@
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
--- ----------------------------
--- Table structure for detail_penjualan
--- ----------------------------
-DROP TABLE IF EXISTS `detail_penjualan`;
-CREATE TABLE `detail_penjualan`  (
-  `no_struk` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `id_obat` int(11) NULL DEFAULT NULL,
-  `qty` int(11) NULL DEFAULT NULL,
-  `sub_total` double NULL DEFAULT NULL,
-  INDEX `no_struk`(`no_struk`) USING BTREE,
-  CONSTRAINT `detail_penjualan_ibfk_1` FOREIGN KEY (`no_struk`) REFERENCES `penjualan` (`no_struk`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+
 
 -- ----------------------------
 -- Table structure for obat
@@ -41,6 +30,8 @@ CREATE TABLE `obat`  (
   `harga` double NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 497 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+
+
 
 -- ----------------------------
 -- Records of obat
@@ -590,6 +581,19 @@ CREATE TABLE `penjualan`  (
   PRIMARY KEY (`no_struk`) USING BTREE,
   INDEX `id_pegawai`(`id_pegawai`) USING BTREE,
   CONSTRAINT `penjualan_ibfk_1` FOREIGN KEY (`id_pegawai`) REFERENCES `pegawai` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Table structure for detail_penjualan
+-- ----------------------------
+DROP TABLE IF EXISTS `detail_penjualan`;
+CREATE TABLE `detail_penjualan`  (
+  `no_struk` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `id_obat` int(11) NULL DEFAULT NULL,
+  `qty` int(11) NULL DEFAULT NULL,
+  `sub_total` double NULL DEFAULT NULL,
+  INDEX `no_struk`(`no_struk`) USING BTREE,
+  CONSTRAINT `detail_penjualan_ibfk_1` FOREIGN KEY (`no_struk`) REFERENCES `penjualan` (`no_struk`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 SET FOREIGN_KEY_CHECKS = 1;

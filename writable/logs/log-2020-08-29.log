@@ -247,3 +247,14 @@ CRITICAL - 2020-08-29 07:27:56 --> syntax error, unexpected '}'
 #4 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
 #6 {main}
+CRITICAL - 2020-08-29 12:04:37 --> Unable to connect to the database.
+#0 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Model.php(462): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\ApotekAPP\app\Controllers\Obat.php(13): CodeIgniter\Model->findAll()
+#4 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Obat->index()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Obat))
+#6 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
