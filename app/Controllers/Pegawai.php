@@ -98,7 +98,7 @@ class Pegawai extends BaseController
     public function formedit()
     {
         if ($this->request->isAJAX()) {
-            $id = $this->request->getVar('idpeg');
+            $id = $this->request->getVar('id');
             $peg = new PegawaiModel;
             $row = $peg->find($id);
             $data = [
@@ -137,6 +137,22 @@ class Pegawai extends BaseController
 
             $msg = [
                 'sukses' => 'Data berhasil Diubah'
+            ];
+            echo json_encode($msg);
+        } else {
+            exit('Maaf Tidak dapat diproses');
+        }
+    }
+
+    public function hapus()
+    {
+        if ($this->request->isAJAX()) {
+            $id = $this->request->getVar('id');
+            $peg = new PegawaiModel;
+            $peg->delete($id);
+
+            $msg = [
+                'sukses' => 'Data Pegawai Berhasil Dihapus'
             ];
             echo json_encode($msg);
         } else {

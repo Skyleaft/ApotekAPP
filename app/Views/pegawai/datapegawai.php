@@ -31,7 +31,7 @@
                     <button type="button" class="btn btn-info btn-sm" onclick="edit('<?= $row['id'] ?>')">
                         <i class="fa fa-tags"></i>
                     </button>
-                    <button type="button" class="btn btn-danger btn-sm" onclick="edit('<?= $row['id'] ?>')">
+                    <button type="button" class="btn btn-danger btn-sm" onclick="hapus('<?= $row['id'] ?>')">
                         <i class="fa fa-trash"></i>
                     </button>
                 </td>
@@ -51,7 +51,7 @@
             type: "post",
             url: "<?= site_url('pegawai/formedit') ?>",
             data: {
-                idpeg: id
+                id: id
             },
             dataType: "json",
             success: function(response) {
@@ -64,5 +64,41 @@
                 alert(xhr.status + "\n" + xhr.responseText + "\n" + thorwnError);
             }
         });
+    }
+
+    function hapus(id) {
+        Swal.fire({
+            title: 'Yakin mau dihapus?',
+            text: "Data tidak dapat dikembalikan!!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            confirmButtonText: 'Ya'
+        }).then((result) => {
+            if (result.value) {
+                $.ajax({
+                    type: "post",
+                    url: "<?= site_url('pegawai/hapus') ?>",
+                    data: {
+                        id: id
+                    },
+                    dataType: "json",
+                    success: function(response) {
+                        if (response.sukses) {
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Berhasil',
+                                text: response.sukses,
+                            })
+                            datapegawai();
+                        }
+                    },
+                    error: function(xhr, ajaxOptions, thorwnError) {
+                        alert(xhr.status + "\n" + xhr.responseText + "\n" + thorwnError);
+                    }
+                });
+            }
+        })
     }
 </script>
