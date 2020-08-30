@@ -39,3 +39,91 @@ CRITICAL - 2020-08-30 01:10:26 --> Invalid file: uts.php
 #6 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #7 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
 #8 {main}
+CRITICAL - 2020-08-30 06:18:11 --> required] is not a valid rule.
+#0 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Validation\Validation.php(333): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('required]')
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Validation\Validation.php(189): CodeIgniter\Validation\Validation->processRules('username', 'Username', '', Array, Array)
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Controller.php(219): CodeIgniter\Validation\Validation->run()
+#3 C:\xampp\htdocs\ApotekAPP\app\Controllers\Login.php(27): CodeIgniter\Controller->validate(Array)
+#4 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Login->cekuser()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#6 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-08-30 06:19:01 --> Undefined variable: msg
+#0 C:\xampp\htdocs\ApotekAPP\app\Controllers\Login.php(51): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 51, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Login->cekuser()
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-08-30 06:28:35 --> syntax error, unexpected '}'
+#0 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Router\Router.php(195): CodeIgniter\Router\Router->autoRoute('login')
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(793): CodeIgniter\Router\Router->handle('login')
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(364): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-08-30 06:29:05 --> Unknown column 'idlevel.users' in 'on clause'
+#0 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(331): mysqli->query('select * from u...')
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(741): CodeIgniter\Database\MySQLi\Connection->execute('select * from u...')
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(669): CodeIgniter\Database\BaseConnection->simpleQuery('select * from u...')
+#3 C:\xampp\htdocs\ApotekAPP\app\Controllers\Login.php(57): CodeIgniter\Database\BaseConnection->query('select * from u...')
+#4 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Login->cekuser()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#6 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-08-30 06:29:55 --> Unknown column 'idlevel.users' in 'on clause'
+#0 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(331): mysqli->query('select * from u...')
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(741): CodeIgniter\Database\MySQLi\Connection->execute('select * from u...')
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(669): CodeIgniter\Database\BaseConnection->simpleQuery('select * from u...')
+#3 C:\xampp\htdocs\ApotekAPP\app\Controllers\Login.php(57): CodeIgniter\Database\BaseConnection->query('select * from u...')
+#4 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Login->cekuser()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#6 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-08-30 07:41:17 --> Cannot use object of type CodeIgniter\Session\Session as array
+#0 C:\xampp\htdocs\ApotekAPP\app\Views\layout\main.php(124): CodeIgniter\Session\Session->get('namauser')
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\View\View.php(257): CodeIgniter\View\View->render('layout/main', Array, true)
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\View\View.php(257): CodeIgniter\View\View->render('layout/menu', Array, true)
+#4 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('layout/beranda', Array, true)
+#5 C:\xampp\htdocs\ApotekAPP\app\Controllers\Panel.php(9): view('layout/beranda')
+#6 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Panel->index()
+#7 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel))
+#8 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2020-08-30 08:43:00 --> A non-numeric value encountered
+#0 C:\xampp\htdocs\ApotekAPP\app\Views\layout\main.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric v...', 'C:\\xampp\\htdocs...', 3, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\View\View.php(257): CodeIgniter\View\View->render('layout/main', Array, true)
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\View\View.php(257): CodeIgniter\View\View->render('layout/menu', Array, true)
+#4 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('layout/beranda', Array, true)
+#5 C:\xampp\htdocs\ApotekAPP\app\Controllers\Panel.php(9): view('layout/beranda')
+#6 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Panel->index()
+#7 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel))
+#8 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2020-08-30 08:43:13 --> A non-numeric value encountered
+#0 C:\xampp\htdocs\ApotekAPP\app\Views\layout\main.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric v...', 'C:\\xampp\\htdocs...', 3, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\View\View.php(257): CodeIgniter\View\View->render('layout/main', Array, true)
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\View\View.php(257): CodeIgniter\View\View->render('layout/menu', Array, true)
+#4 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('layout/beranda', Array, true)
+#5 C:\xampp\htdocs\ApotekAPP\app\Controllers\Panel.php(9): view('layout/beranda')
+#6 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Panel->index()
+#7 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel))
+#8 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#11 {main}

@@ -12,6 +12,9 @@
     <link href="<?= base_url() ?>/assets/plugins/fontawesome/css/solid.min.css" rel="stylesheet" type="text/css">
 
     <link href="<?= base_url() ?>/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <link href="<?= base_url() ?>/assets/plugins/node_modules/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet" type="text/css">
+    <script src="<?= base_url() ?>/assets/plugins/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
     <!-- CSS Libraries -->
     <link href="<?= base_url() ?>/assets/css/bootstrap-social.css" rel="stylesheet" type="text/css">
 
@@ -42,42 +45,40 @@
                             <img src="<?= base_url() ?>/assets/images/iconku.png" alt="logo" width="110" class="shadow-light rounded-circle mb-5 mt-2" style="margin-left: auto;margin-right: auto;display: block;">
                         </a>
                         <h4 class="text-dark font-weight-normal">Welcome to <span class="font-weight-bold">Apotek APP</span></h4>
-                        <form method="POST" action="#" class="needs-validation" novalidate="">
-                            <?= csrf_field(); ?>
-                            <div class="form-group">
-                                <label for="username">Username</label>
-                                <input id="username" type="text" class="form-control" name="username" tabindex="1" required autofocus>
-                                <div class="invalid-feedback">
-                                    harap masukan username
-                                </div>
+                        <?= form_open('login/cekuser', ['class' => 'formlogin']) ?>
+                        <?= csrf_field(); ?>
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input id="username" type="text" class="form-control" name="username" tabindex="1" autofocus>
+                            <div class="invalid-feedback errorUser">
                             </div>
+                        </div>
 
-                            <div class="form-group">
-                                <div class="d-block">
-                                    <label for="password" class="control-label">Password</label>
-                                </div>
-                                <input id="password" type="password" class="form-control" name="password" tabindex="2" required>
-                                <div class="invalid-feedback">
-                                    Harap Masukan Password
-                                </div>
+                        <div class="form-group">
+                            <div class="d-block">
+                                <label for="password" class="control-label">Password</label>
                             </div>
+                            <input id="password" type="password" class="form-control" name="password" tabindex="2">
+                            <div class="invalid-feedback errorPass">
+                            </div>
+                        </div>
 
-                            <div class="form-group">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" name="remember" class="custom-control-input" tabindex="3" id="remember-me">
-                                    <label class="custom-control-label" for="remember-me">Remember Me</label>
-                                </div>
+                        <div class="form-group">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" name="remember" class="custom-control-input" tabindex="3" id="remember-me">
+                                <label class="custom-control-label" for="remember-me">Remember Me</label>
                             </div>
+                        </div>
 
-                            <div class="form-group text-right">
-                                <a href="auth-forgot-password.html" class="float-left mt-3">
-                                    Forgot Password?
-                                </a>
-                                <button type="submit" class="btn btn-primary btn-lg btn-icon icon-right" tabindex="4">
-                                    Login
-                                </button>
-                            </div>
-                        </form>
+                        <div class="form-group text-right">
+                            <a href="auth-forgot-password.html" class="float-left mt-3">
+                                Forgot Password?
+                            </a>
+                            <button type="submit" class="btn btn-primary btn-lg btn-icon icon-right" tabindex="4" name="btn_login">
+                                Login
+                            </button>
+                        </div>
+                        <?= form_close(); ?>
 
                         <div class="text-center mt-4 mb-3">
                             <div class="text-job text-muted">Login With Social</div>
@@ -126,14 +127,49 @@
 
     <!-- Page Specific JS File -->
     <script>
-        $.ajax({
-            type: "POST",
-            url: "$(this).attr('action')",
-            data: "$(this).serialize()",
-            dataType: "dataType",
-            success: function(response) {
+        $(document).ready(function() {
+            $('.formlogin').submit(function(e) {
+                e.preventDefault();
+                $.ajax({
+                    type: "POST",
+                    url: $(this).attr('action'),
+                    data: $(this).serialize(),
+                    dataType: "json",
+                    beforeSend: function() {
+                        $('.btn_login').prop('disabled', true);
+                        $('.btn_login').html('<i class="fa fa-spin fa-spinner"></i>');
+                    },
+                    complete: function() {
+                        $('.btn_login').prop('disabled', false);
+                        $('.btn_login').html('Login');
+                    },
+                    success: function(response) {
+                        if (response.error) {
+                            if (response.error.username) {
+                                $('#username').addClass('is-invalid');
+                                $('.errorUser').html(response.error.username);
+                            } else {
+                                $('#username').removeClass('is-invalid');
+                                $('.errorUser').html('');
+                            }
 
-            }
+                            if (response.error.password) {
+                                $('#password').addClass('is-invalid');
+                                $('.errorPass').html(response.error.password);
+                            } else {
+                                $('#password').removeClass('is-invalid');
+                                $('.errorPass').html('');
+                            }
+                        }
+                        if (response.sukses) {
+                            window.location = response.sukses.link;
+                        }
+                    },
+                    error: function(xhr, ajaxOptions, thorwnError) {
+                        alert(xhr.status + "\n" + xhr.responseText + "\n" + thorwnError);
+                    }
+                });
+            })
         });
     </script>
 

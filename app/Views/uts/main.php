@@ -1,115 +1,356 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html class="no-js" lang="zxx">
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <title>MZstudio - Apotek APP</title>
-    <meta content="Admin Dashboard" name="Aplikasi Apotek Web Bassed" />
-    <meta content="Mannatthemes" name="Milzan Malik" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title> App landing | Template</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="<?= base_url() ?>/assets/img/favicon.ico">
 
-    <link rel="shortcut icon" href="<?= base_url() ?>/assets/images/iconku.png">
-
+    <!-- CSS here -->
+    <link rel="stylesheet" href="<?= base_url() ?>/assets/appli/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/assets/appli/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/assets/appli/css/slicknav.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/assets/appli/css/flaticon.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/assets/appli/css/progressbar_barfiller.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/assets/appli/css/gijgo.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/assets/appli/css/animate.min.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/assets/appli/css/animated-headline.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/assets/appli/css/magnific-popup.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/assets/appli/css/themify-icons.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/assets/appli/css/slick.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/assets/appli/css/nice-select.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/assets/appli/css/style.css">
     <link href="<?= base_url() ?>/assets/plugins/fontawesome/css/fontawesome.min.css" rel="stylesheet" type="text/css">
     <link href="<?= base_url() ?>/assets/plugins/fontawesome/css/brands.min.css" rel="stylesheet" type="text/css">
     <link href="<?= base_url() ?>/assets/plugins/fontawesome/css/solid.min.css" rel="stylesheet" type="text/css">
-
-    <link href="<?= base_url() ?>/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="<?= base_url() ?>/assets/css/icons.css" rel="stylesheet" type="text/css">
-    <link href="<?= base_url() ?>/assets/css/horizontal/style.css" rel="stylesheet" type="text/css">
-
 </head>
 
-
 <body>
-
-    <!-- Loader -->
-    <div id="preloader">
-        <div id="status">
-            <div class="spinner"></div>
-        </div>
-    </div>
-
-    <!-- Navigation Bar-->
-    <header id="topnav">
-        <div class="topbar-main">
-            <div class="container-fluid">
-
-                <!-- Logo container-->
-                <div class="logo">
-                    <!-- Text Logo -->
-                    <!--<a href="index.html" class="logo">-->
-                    <!--Annex-->
-                    <!--</a>-->
-                    <!-- Image Logo -->
-                    <a href="<?= site_url('uts') ?>" class="logo">
-                        <img src="<?= base_url() ?>/assets/images/logo-sm.png" alt="" height="45" class="logo-small">
-                        <img src="<?= base_url() ?>/assets/images/logo.png" alt="" height="60" class="logo-large">
-                    </a>
-
-                </div>
-                <!-- End Logo container-->
-
-
-                <div class="menu-extras topbar-custom">
-
-                    <ul class="list-inline float-right mb-0">
-                        <li class="list-inline-item dropdown notification-list hide-phone">
-                            <a class="nav-link arrow-none waves-effect" href="<?= site_url('login') ?>" role="button" aria-haspopup="false" aria-expanded="false">
-                                <i class="fas fa-sign-in-alt"></i></i> Login
-
-                            </a>
-                        </li>
-
-                    </ul>
-                </div>
-                <!-- end menu-extras -->
-
-                <div class="clearfix"></div>
-
-            </div> <!-- end container -->
-        </div>
-        <!-- end topbar-main -->
-
-    </header>
-    <!-- End Navigation Bar-->
-
-
-    <div class="wrapper">
-        <div class="container-fluid">
-
-        </div> <!-- end container -->
-    </div>
-    <!-- end wrapper -->
-
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    © 2020 Milzan Malik
+    <!-- ? Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="<?= base_url() ?>/assets/appli/img/logo/loder.png" alt="">
                 </div>
             </div>
         </div>
+    </div>
+    <!-- Preloader Start -->
+    <header>
+        <!-- Header Start -->
+        <div class="header-area header-transparent">
+            <div class="main-header ">
+                <div class="header-bottom  header-sticky">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <!-- Logo -->
+                            <div class="col-xl-2 col-lg-2">
+                                <div class="logo">
+                                    <a href="<?= site_url('home') ?>"><img src="<?= base_url() ?>/assets/appli/img/logo/logo.png" alt="" width="60"></a>
+                                </div>
+                            </div>
+                            <div class="col-xl-10 col-lg-10">
+                                <div class="menu-wrapper  d-flex align-items-center justify-content-end">
+                                    <!-- Main-menu -->
+                                    <div class="main-menu d-none d-lg-block">
+                                        <nav>
+                                            <ul id="navigation">
+                                                <li class="active"><a href="<?= site_url('home') ?>">Home</a></li>
+                                                <li><a href="#">Features</a></li>
+                                                <li><a href="#">About</a></li>
+                                                <li><a href="#">Contact</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                    <!-- Header-btn -->
+                                    <div class="header-right-btn d-none d-lg-block ml-65">
+                                        <a href="<?= site_url('login') ?>" class="border-btn">Log in</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Mobile Menu -->
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+    <!-- header end -->
+    <main>
+        <!--? slider Area Start-->
+        <section class="slider-area ">
+            <div class="slider-active">
+                <!-- Single Slider -->
+                <div class="single-slider slider-height">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-xl-8 col-lg-11 col-md-12">
+                                <div class="hero__caption text-center">
+                                    <h1 data-animation="bounceIn" data-delay="0.2s">Stay connected together in your own business network</h1>
+                                    <p data-animation="fadeInUp" data-delay="0.4s">Personalized experiences are proven to increase conversions. Appli makes
+                                        it easy. Let's make the internet delightfully human.</p>
+                                    <a href="#" class="btn hero-btn" data-animation="fadeInUp" data-delay="0.7s">Get Started Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Slider -->
+                <div class="single-slider slider-height">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-xl-8 col-lg-11 col-md-12">
+                                <div class="hero__caption text-center">
+                                    <h1 data-animation="bounceIn" data-delay="0.2s">Stay connected together in your own business network</h1>
+                                    <p data-animation="fadeInUp" data-delay="0.4s">Personalized experiences are proven to increase conversions. Appli makes
+                                        it easy. Let's make the internet delightfully human.</p>
+                                    <a href="#" class="btn hero-btn" data-animation="fadeInUp" data-delay="0.7s">Get Started Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- slider Area End-->
+        <div class="project-screen">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="screen-img">
+                            <img src="<?= base_url() ?>/assets/appli/img/gallery/screen.png" alt="" class=" w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--? Our Services Start -->
+        <section class="our-services">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-7 col-lg-8">
+                        <!-- Section Tittle -->
+                        <div class="section-tittle text-center mb-80">
+                            <h2>Finally focus on my marketing strategy and delegate</h2>
+                            <p>In the old days, your website was the same for everyone. Not anymore. Experiences lets you adapt your website for every audience.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class=" col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-services mb-30">
+                            <div class="services-ion">
+                                <img src="<?= base_url() ?>/assets/img/icon/services1.svg" alt="">
+                            </div>
+                            <div class="services-cap">
+                                <h5><a href="#">Design & creatives</a></h5>
+                                <p>The automated process starts as soon as your clothes go into.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-services mb-30">
+                            <div class="services-ion">
+                                <img src="<?= base_url() ?>/assets/img/icon/services2.svg" alt="">
+                            </div>
+                            <div class="services-cap">
+                                <h5><a href="#">Design & creatives</a></h5>
+                                <p>The automated process starts as soon as your clothes go into.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-services mb-30">
+                            <div class="services-ion">
+                                <img src="<?= base_url() ?>/assets/img/icon/services3.svg" alt="">
+                            </div>
+                            <div class="services-cap">
+                                <h5><a href="#">Design & creatives</a></h5>
+                                <p>The automated process starts as soon as your clothes go into.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-services mb-30">
+                            <div class="services-ion">
+                                <img src="<?= base_url() ?>/assets/img/icon/services4.svg" alt="">
+                            </div>
+                            <div class="services-cap">
+                                <h5><a href="#">Design & creatives</a></h5>
+                                <p>The automated process starts as soon as your clothes go into.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-services mb-30">
+                            <div class="services-ion">
+                                <img src="<?= base_url() ?>/assets/img/icon/services5.svg" alt="">
+                            </div>
+                            <div class="services-cap">
+                                <h5><a href="#">Design & creatives</a></h5>
+                                <p>The automated process starts as soon as your clothes go into.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-services mb-30">
+                            <div class="services-ion">
+                                <img src="<?= base_url() ?>/assets/img/icon/services6.svg" alt="">
+                            </div>
+                            <div class="services-cap">
+                                <h5><a href="#">Design & creatives</a></h5>
+                                <p>The automated process starts as soon as your clothes go into.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Our Services End -->
+        <!--? About Area  -->
+        <section class="about-area2 section-padding40 section-bg2" data-background="<?= base_url() ?>/assets/img/gallery/section-bg3.png">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-5 col-lg-6 col-md-12">
+                        <div class="about-caption mb-50">
+                            <div class="about-icon">
+                                <img src="<?= base_url() ?>/assets/img/icon/about.svg" alt="">
+                            </div>
+                            <!-- Section Tittle -->
+                            <div class="section-tittle mb-25">
+                                <h2>You have the power to personalize your website coding.</h2>
+                            </div>
+                            <p class="mb-20">
+                                What if you could get all your website tasks off your plate and focus only on the fun stuff? Working with Growmodo allows you to scale your marketing and grow faster without becoming a designer or developer yourself. </p>
+                            <a href="about.html" class="all-btn">See how it work</a>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-9 col-sm-9">
+                        <!-- about-img -->
+                        <div class="about-img ">
+                            <img src="<?= base_url() ?>/assets/img/gallery/about2.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Area End -->
+        <!--? About Area  -->
+        <section class="about-area2 pb-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-6 col-lg-5 col-md-9">
+                        <!-- about-img -->
+                        <div class="about-img ">
+                            <img src="<?= base_url() ?>/assets/img/gallery/about1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-6 col-md-12">
+                        <div class="about-caption mb-50">
+                            <div class="about-icon">
+                                <img src="<?= base_url() ?>/assets/img/icon/about.svg" alt="">
+                            </div>
+                            <!-- Section Tittle -->
+                            <div class="section-tittle mb-25">
+                                <h2>Personalized experiences are proven to increase conversions</h2>
+                            </div>
+                            <p class="mb-20">
+                                What if you could get all your website tasks off your plate and focus only on the fun stuff? Working with Growmodo allows you to scale your marketing and grow faster without becoming a designer or developer yourself.
+                            </p>
+                            <a href="about.html" class="all-btn">See how it work</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Area End -->
+
+
+    </main>
+    <footer>
+        <div class="footer-wrappper section-bg" data-background="<?= base_url() ?>/assets/img/gallery/footer-bg.png">
+
+            <!-- footer-bottom area -->
+            <div class="footer-bottom-area">
+                <div class="container">
+                    <div class="footer-border">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-xl-12 ">
+                                <div class="footer-copy-right text-center">
+                                    <p>
+                                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                        Copyright &copy;<script>
+                                            document.write(new Date().getFullYear());
+                                        </script> Milzan Malik | Template made by Colorlib</a>
+                                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer End-->
+        </div>
     </footer>
-    <!-- End Footer -->
 
+    <!-- Scroll Up -->
+    <div id="back-top">
+        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+    </div>
 
-    <!-- jQuery  -->
-    <script src="<?= base_url() ?>/assets/js/jquery.min.js"></script>
-    <script src="<?= base_url() ?>/assets/js/popper.min.js"></script>
-    <script src="<?= base_url() ?>/assets/js/bootstrap.min.js"></script>
-    <script src="<?= base_url() ?>/assets/js/modernizr.min.js"></script>
-    <script src="<?= base_url() ?>/assets/js/waves.js"></script>
-    <script src="<?= base_url() ?>/assets/js/jquery.slimscroll.js"></script>
-    <script src="<?= base_url() ?>/assets/js/jquery.nicescroll.js"></script>
-    <script src="<?= base_url() ?>/assets/js/jquery.scrollTo.min.js"></script>
+    <!-- JS here -->
+    <script src="<?= base_url() ?>/assets/appli/js/vendor/modernizr-3.5.0.min.js"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="<?= base_url() ?>/assets/appli/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="<?= base_url() ?>/assets/appli/js/popper.min.js"></script>
+    <script src="<?= base_url() ?>/assets/appli/js/bootstrap.min.js"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="<?= base_url() ?>/assets/appli/js/jquery.slicknav.min.js"></script>
 
-    <!-- App js -->
-    <script src="<?= base_url() ?>/assets/js/app.js"></script>
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src="<?= base_url() ?>/assets/appli/js/owl.carousel.min.js"></script>
+    <script src="<?= base_url() ?>/assets/appli/js/slick.min.js"></script>
+    <!-- One Page, Animated-HeadLin -->
+    <script src="<?= base_url() ?>/assets/appli/js/wow.min.js"></script>
+    <script src="<?= base_url() ?>/assets/appli/js/animated.headline.js"></script>
+    <script src="<?= base_url() ?>/assets/appli/js/jquery.magnific-popup.js"></script>
+
+    <!-- Date Picker -->
+    <script src="<?= base_url() ?>/assets/appli/js/gijgo.min.js"></script>
+    <!-- Nice-select, sticky -->
+    <script src="<?= base_url() ?>/assets/appli/js/jquery.nice-select.min.js"></script>
+    <script src="<?= base_url() ?>/assets/appli/js/jquery.sticky.js"></script>
+    <!-- Progress -->
+    <script src="<?= base_url() ?>/assets/appli/js/jquery.barfiller.js"></script>
+
+    <!-- counter , waypoint,Hover Direction -->
+    <script src="<?= base_url() ?>/assets/appli/js/jquery.counterup.min.js"></script>
+    <script src="<?= base_url() ?>/assets/appli/js/waypoints.min.js"></script>
+    <script src="<?= base_url() ?>/assets/appli/js/jquery.countdown.min.js"></script>
+    <script src="<?= base_url() ?>/assets/appli/js/hover-direction-snake.min.js"></script>
+
+    <!-- contact js -->
+    <script src="<?= base_url() ?>/assets/appli/js/contact.js"></script>
+    <script src="<?= base_url() ?>/assets/appli/js/jquery.form.js"></script>
+    <script src="<?= base_url() ?>/assets/appli/js/jquery.validate.min.js"></script>
+    <script src="<?= base_url() ?>/assets/appli/js/mail-script.js"></script>
+    <script src="<?= base_url() ?>/assets/appli/js/jquery.ajaxchimp.min.js"></script>
+
+    <!-- Jquery Plugins, main Jquery -->
+    <script src="<?= base_url() ?>/assets/appli/js/plugins.js"></script>
+    <script src="<?= base_url() ?>/assets/appli/js/main.js"></script>
 
 </body>
 
