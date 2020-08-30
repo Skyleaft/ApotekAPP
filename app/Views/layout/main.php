@@ -14,7 +14,7 @@ $locfoto = base_url() . $session->get('foto');
     <meta content="Mannatthemes" name="Milzan Malik" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <link rel="shortcut icon" href="<?= base_url() ?>/assets/images/iconku.png">
+    <link rel="shortcut icon" href="<?= base_url() ?>/assets/images/logo-icon.png">
 
     <link href="<?= base_url() ?>/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="<?= base_url() ?>/assets/css/icons.css" rel="stylesheet" type="text/css">
@@ -53,7 +53,7 @@ $locfoto = base_url() . $session->get('foto');
             <!-- LOGO -->
             <div class="topbar-left">
                 <div class="text-center">
-                    <a href="<?= site_url('panel') ?>" class="logo"><img src="<?= base_url() ?>/assets/images/logo.png" height="40" alt="logo"></a>
+                    <a href="<?= site_url('panel') ?>" class="logo"><img src="<?= base_url() ?>/assets/images/logo.png" height="60" alt="logo"></a>
                 </div>
             </div>
 

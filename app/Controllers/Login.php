@@ -15,6 +15,19 @@ class Login extends BaseController
         return view('uts/viewlogin');
     }
 
+    public function cekip()
+    {
+        if ($_SERVER['REMOTE_ADDR'] == "127.0.0.1") {
+            $msg = [
+                'sukses' => [
+                    'username' => 'admin',
+                    'password' => 'admin2020'
+                ]
+            ];
+        }
+        echo json_encode($msg);
+    }
+
 
     public function encrypt()
     {

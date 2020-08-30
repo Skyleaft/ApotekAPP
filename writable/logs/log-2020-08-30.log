@@ -127,3 +127,139 @@ CRITICAL - 2020-08-30 08:43:13 --> A non-numeric value encountered
 #9 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #10 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
 #11 {main}
+CRITICAL - 2020-08-30 11:16:56 --> Undefined variable: username
+#0 C:\xampp\htdocs\ApotekAPP\app\Views\uts\viewlogin.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 58, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('uts/viewlogin', Array, true)
+#3 C:\xampp\htdocs\ApotekAPP\app\Controllers\Login.php(15): view('uts/viewlogin')
+#4 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Login->index()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#6 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-08-30 11:28:47 --> Undefined variable: pass
+#0 C:\xampp\htdocs\ApotekAPP\app\Views\uts\viewlogin.php(68): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 68, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('uts/viewlogin', Array, true)
+#3 C:\xampp\htdocs\ApotekAPP\app\Controllers\Login.php(15): view('uts/viewlogin')
+#4 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Login->index()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#6 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-08-30 11:29:19 --> Undefined variable: username
+#0 C:\xampp\htdocs\ApotekAPP\app\Views\uts\viewlogin.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 58, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('uts/viewlogin', Array, true)
+#3 C:\xampp\htdocs\ApotekAPP\app\Controllers\Login.php(15): view('uts/viewlogin')
+#4 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Login->index()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#6 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-08-30 11:32:39 --> syntax error, unexpected '}', expecting end of file
+#0 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('uts/viewlogin', Array, true)
+#1 C:\xampp\htdocs\ApotekAPP\app\Controllers\Login.php(15): view('uts/viewlogin')
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Login->index()
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#4 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2020-08-30 11:45:32 --> Undefined variable: msg
+#0 C:\xampp\htdocs\ApotekAPP\app\Controllers\Login.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Login->cekip()
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-08-30 11:46:00 --> Undefined variable: msg
+#0 C:\xampp\htdocs\ApotekAPP\app\Controllers\Login.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Login->cekip()
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-08-30 11:46:57 --> Undefined variable: msg
+#0 C:\xampp\htdocs\ApotekAPP\app\Controllers\Login.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Login->cekip()
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-08-30 11:53:13 --> Undefined variable: msg
+#0 C:\xampp\htdocs\ApotekAPP\app\Controllers\Login.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Login->cekip()
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-08-30 11:53:47 --> Undefined property: CodeIgniter\View\View::$input
+#0 C:\xampp\htdocs\ApotekAPP\app\Views\uts\viewlogin.php(75): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 75, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('uts/viewlogin', Array, true)
+#3 C:\xampp\htdocs\ApotekAPP\app\Controllers\Login.php(15): view('uts/viewlogin')
+#4 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Login->index()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#6 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-08-30 11:53:55 --> Undefined property: CodeIgniter\View\View::$input
+#0 C:\xampp\htdocs\ApotekAPP\app\Views\uts\viewlogin.php(75): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 75, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('uts/viewlogin', Array, true)
+#3 C:\xampp\htdocs\ApotekAPP\app\Controllers\Login.php(15): view('uts/viewlogin')
+#4 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Login->index()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#6 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-08-30 11:54:11 --> Undefined variable: msg
+#0 C:\xampp\htdocs\ApotekAPP\app\Controllers\Login.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Login->cekip()
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-08-30 11:57:13 --> Undefined variable: msg
+#0 C:\xampp\htdocs\ApotekAPP\app\Controllers\Login.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Login->cekip()
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-08-30 11:59:10 --> Undefined variable: msg
+#0 C:\xampp\htdocs\ApotekAPP\app\Controllers\Login.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Login->cekip()
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-08-30 11:59:24 --> Undefined variable: msg
+#0 C:\xampp\htdocs\ApotekAPP\app\Controllers\Login.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Login->cekip()
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-08-30 11:59:36 --> Undefined variable: msg
+#0 C:\xampp\htdocs\ApotekAPP\app\Controllers\Login.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Login->cekip()
+#2 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}

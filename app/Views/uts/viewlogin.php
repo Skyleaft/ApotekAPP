@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
     <title>Login &mdash; Apotek APP</title>
-    <link rel="shortcut icon" href="<?= base_url() ?>/assets/images/iconku.png">
+    <link rel="shortcut icon" href="<?= base_url() ?>/assets/images/logo-icon.png">
 
     <link href="<?= base_url() ?>/assets/plugins/fontawesome/css/fontawesome.min.css" rel="stylesheet" type="text/css">
     <link href="<?= base_url() ?>/assets/plugins/fontawesome/css/brands.min.css" rel="stylesheet" type="text/css">
@@ -42,14 +42,14 @@
                 <div class="col-lg-4 col-md-6 col-12 order-lg-2 min-vh-100 order-2 bg-white">
                     <div class="p-4 m-3">
                         <a href="<?= site_url('uts') ?>">
-                            <img src="<?= base_url() ?>/assets/images/iconku.png" alt="logo" width="110" class="shadow-light rounded-circle mb-5 mt-2" style="margin-left: auto;margin-right: auto;display: block;">
+                            <img src="<?= base_url() ?>/assets/images/logo-icon.png" alt="logo" width="110" class="shadow-light rounded-circle mb-5 mt-2" style="margin-left: auto;margin-right: auto;display: block;">
                         </a>
-                        <h4 class="text-dark font-weight-normal">Welcome to <span class="font-weight-bold">Apotek APP</span></h4>
+                        <h4 class="text-dark font-weight-normal">Halaman Login <span class="font-weight-bold">Apotek APP</span></h4>
                         <?= form_open('login/cekuser', ['class' => 'formlogin']) ?>
                         <?= csrf_field(); ?>
                         <div class="form-group">
                             <label for="username">Username</label>
-                            <input id="username" type="text" class="form-control" name="username" tabindex="1" autofocus>
+                            <input id="username" type="text" class="form-control" name="username" value="" tabindex="1" autofocus>
                             <div class="invalid-feedback errorUser">
                             </div>
                         </div>
@@ -58,7 +58,7 @@
                             <div class="d-block">
                                 <label for="password" class="control-label">Password</label>
                             </div>
-                            <input id="password" type="password" class="form-control" name="password" tabindex="2">
+                            <input id="password" type="password" class="form-control" name="password" value="" tabindex="2">
                             <div class="invalid-feedback errorPass">
                             </div>
                         </div>
@@ -128,6 +128,17 @@
     <!-- Page Specific JS File -->
     <script>
         $(document).ready(function() {
+            $.ajax({
+                type: "GET",
+                url: "<?= site_url("login/cekip") ?>",
+                dataType: "json",
+                success: function(response) {
+                    if (response.sukses) {
+                        document.getElementById('username').value = response.sukses.username;
+                    }
+
+                }
+            });
             $('.formlogin').submit(function(e) {
                 e.preventDefault();
                 $.ajax({

@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="<?= base_url() ?>/assets/img/favicon.ico">
+    <link rel="shortcut icon" href="<?= base_url() ?>/assets/images/logo-icon.png">
 
     <!-- CSS here -->
     <link rel="stylesheet" href="<?= base_url() ?>/assets/appli/css/bootstrap.min.css">
@@ -52,7 +52,7 @@
                             <!-- Logo -->
                             <div class="col-xl-2 col-lg-2">
                                 <div class="logo">
-                                    <a href="<?= site_url('home') ?>"><img src="<?= base_url() ?>/assets/appli/img/logo/logo.png" alt="" width="60"></a>
+                                    <a href="<?= site_url('home') ?>"><img src="<?= base_url() ?>/assets/appli/img/logo/logo.png" alt="" width="150"></a>
                                 </div>
                             </div>
                             <div class="col-xl-10 col-lg-10">
@@ -96,10 +96,9 @@
                         <div class="row justify-content-center">
                             <div class="col-xl-8 col-lg-11 col-md-12">
                                 <div class="hero__caption text-center">
-                                    <h1 data-animation="bounceIn" data-delay="0.2s">Stay connected together in your own business network</h1>
-                                    <p data-animation="fadeInUp" data-delay="0.4s">Personalized experiences are proven to increase conversions. Appli makes
-                                        it easy. Let's make the internet delightfully human.</p>
-                                    <a href="#" class="btn hero-btn" data-animation="fadeInUp" data-delay="0.7s">Get Started Now</a>
+                                    <h1 data-animation="bounceIn" data-delay="0.2s">Selamat Datang Di Landing Page Apotek APP</h1>
+                                    <p data-animation="fadeInUp" data-delay="0.4s">Sebuah aplikasi untuk memanajemen apotek</p>
+                                    <a href="<?= site_url('login') ?>" class="btn hero-btn" data-animation="fadeInUp" data-delay="0.7s">Menuju Panel</a>
                                 </div>
                             </div>
                         </div>
@@ -111,10 +110,9 @@
                         <div class="row justify-content-center">
                             <div class="col-xl-8 col-lg-11 col-md-12">
                                 <div class="hero__caption text-center">
-                                    <h1 data-animation="bounceIn" data-delay="0.2s">Stay connected together in your own business network</h1>
-                                    <p data-animation="fadeInUp" data-delay="0.4s">Personalized experiences are proven to increase conversions. Appli makes
-                                        it easy. Let's make the internet delightfully human.</p>
-                                    <a href="#" class="btn hero-btn" data-animation="fadeInUp" data-delay="0.7s">Get Started Now</a>
+                                    <h1 data-animation="bounceIn" data-delay="0.2s">Mulai Bisnis Apotek Mu</h1>
+                                    <p data-animation="fadeInUp" data-delay="0.4s">Dengan menggunakan aplikasi ini dapat mempermudah memanjemen apotek</p>
+                                    <a href="<?= site_url('login') ?>" class="btn hero-btn" data-animation="fadeInUp" data-delay="0.7s">Menuju Panel</a>
                                 </div>
                             </div>
                         </div>
@@ -218,63 +216,8 @@
             </div>
         </section>
         <!-- Our Services End -->
-        <!--? About Area  -->
-        <section class="about-area2 section-padding40 section-bg2" data-background="<?= base_url() ?>/assets/img/gallery/section-bg3.png">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-xl-5 col-lg-6 col-md-12">
-                        <div class="about-caption mb-50">
-                            <div class="about-icon">
-                                <img src="<?= base_url() ?>/assets/img/icon/about.svg" alt="">
-                            </div>
-                            <!-- Section Tittle -->
-                            <div class="section-tittle mb-25">
-                                <h2>You have the power to personalize your website coding.</h2>
-                            </div>
-                            <p class="mb-20">
-                                What if you could get all your website tasks off your plate and focus only on the fun stuff? Working with Growmodo allows you to scale your marketing and grow faster without becoming a designer or developer yourself. </p>
-                            <a href="about.html" class="all-btn">See how it work</a>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-6 col-md-9 col-sm-9">
-                        <!-- about-img -->
-                        <div class="about-img ">
-                            <img src="<?= base_url() ?>/assets/img/gallery/about2.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- About Area End -->
-        <!--? About Area  -->
-        <section class="about-area2 pb-bottom">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-xl-6 col-lg-5 col-md-9">
-                        <!-- about-img -->
-                        <div class="about-img ">
-                            <img src="<?= base_url() ?>/assets/img/gallery/about1.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-xl-5 col-lg-6 col-md-12">
-                        <div class="about-caption mb-50">
-                            <div class="about-icon">
-                                <img src="<?= base_url() ?>/assets/img/icon/about.svg" alt="">
-                            </div>
-                            <!-- Section Tittle -->
-                            <div class="section-tittle mb-25">
-                                <h2>Personalized experiences are proven to increase conversions</h2>
-                            </div>
-                            <p class="mb-20">
-                                What if you could get all your website tasks off your plate and focus only on the fun stuff? Working with Growmodo allows you to scale your marketing and grow faster without becoming a designer or developer yourself.
-                            </p>
-                            <a href="about.html" class="all-btn">See how it work</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- About Area End -->
+
+
 
 
     </main>
