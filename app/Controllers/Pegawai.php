@@ -17,9 +17,9 @@ class Pegawai extends BaseController
     public function ambildata()
     {
         if ($this->request->isAJAX()) {
-            $peg = new PegawaiModel;
+
             $data = [
-                'showdata' => $peg->findAll()
+                'showdata' => $this->peg->findAll()
             ];
             $msg = [
                 'data' => view('pegawai/datapegawai', $data)
@@ -99,8 +99,8 @@ class Pegawai extends BaseController
     {
         if ($this->request->isAJAX()) {
             $id = $this->request->getVar('id');
-            $peg = new PegawaiModel;
-            $row = $peg->find($id);
+
+            $row = $this->peg->find($id);
             $data = [
                 'id' => $row['id'],
                 'no_ktp' => $row['no_ktp'],
@@ -132,8 +132,7 @@ class Pegawai extends BaseController
                 'no_telp' => $this->request->getVar('no_telp')
             ];
 
-            $peg = new PegawaiModel;
-            $peg->update($id, $simpandata);
+            $this->peg->update($id, $simpandata);
 
             $msg = [
                 'sukses' => 'Data berhasil Diubah'
@@ -148,8 +147,8 @@ class Pegawai extends BaseController
     {
         if ($this->request->isAJAX()) {
             $id = $this->request->getVar('id');
-            $peg = new PegawaiModel;
-            $peg->delete($id);
+
+            $this->peg->delete($id);
 
             $msg = [
                 'sukses' => 'Data Pegawai Berhasil Dihapus'
