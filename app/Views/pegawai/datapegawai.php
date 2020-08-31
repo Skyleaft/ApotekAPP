@@ -9,7 +9,7 @@
             <th>Tanggal Lahir</th>
             <th>Alamat</th>
             <th>No.Telepon</th>
-            <th>Aksi/th>
+            <th>Aksi</th>
         </tr>
     </thead>
 

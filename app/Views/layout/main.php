@@ -118,8 +118,8 @@ $locfoto = base_url() . $session->get('foto');
                             <li class="list-inline-item dropdown notification-list">
 
                                 <a class="nav-link dropdown-toggle arrow-none waves-effect nav-user nav-link-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                                    <div class="d-sm-none d-lg-inline-block">Hi, <?= $session->get('namauser') ?> </div>
-                                    <img src="<?= $locfoto ?>" alt="user" class="rounded-circle">
+                                    <div class="d-sm-none d-lg-inline-block" style="color:white;">Hi, <?= $session->get('namauser') ?> </div>
+                                    <img src="<?= $locfoto ?>" alt="user" class="rounded-circle ml-2">
                                 </a>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
@@ -141,12 +141,6 @@ $locfoto = base_url() . $session->get('foto');
                                 <button class="button-menu-mobile open-left waves-light waves-effect">
                                     <i class="mdi mdi-menu"></i>
                                 </button>
-                            </li>
-                            <li class="hide-phone app-search">
-                                <form role="search" class="">
-                                    <input type="text" placeholder="Search..." class="form-control">
-                                    <a href=""><i class="fa fa-search"></i></a>
-                                </form>
                             </li>
                         </ul>
 

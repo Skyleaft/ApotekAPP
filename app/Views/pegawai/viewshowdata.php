@@ -25,6 +25,9 @@
                 <button class="btn btn-primary btn-sm tambah">
                     <i class="fas fa-plus-circle"></i> Tambah Data
                 </button>
+                <button class="btn btn-info btn-sm tambahbanyak">
+                    <i class="fas fa-plus-circle"></i> Tambah Banyak Data
+                </button>
             </div>
             <p class="card-text viewdata">
 
@@ -62,6 +65,23 @@
                     $('.viewmodal').html(response.data).show();
 
                     $('#modaltambah').modal('show');
+                },
+                error: function(xhr, ajaxOptions, thorwnError) {
+                    alert(xhr.status + "\n" + xhr.responseText + "\n" + thorwnError);
+                }
+            });
+        });
+
+        $('.tambahbanyak').click(function(e) {
+            $.ajax({
+                url: "<?= site_url('pegawai/formtambahbanyak') ?>",
+                dataType: "json",
+                beforeSend: function() {
+                    $('.viewdata').html('<i class="fas fa-spin fa-spinner"></i>')
+                },
+                success: function(response) {
+                    $('.viewdata').html(response.data).show();
+
                 },
                 error: function(xhr, ajaxOptions, thorwnError) {
                     alert(xhr.status + "\n" + xhr.responseText + "\n" + thorwnError);

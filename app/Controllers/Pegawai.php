@@ -9,7 +9,6 @@ class Pegawai extends BaseController
 {
     public function index()
     {
-
         //d($peg->findAll());
         return view('pegawai/viewshowdata');
     }
@@ -152,6 +151,50 @@ class Pegawai extends BaseController
 
             $msg = [
                 'sukses' => 'Data Pegawai Berhasil Dihapus'
+            ];
+            echo json_encode($msg);
+        } else {
+            exit('Maaf Tidak dapat diproses');
+        }
+    }
+
+    public function formtambahbanyak()
+    {
+        if ($this->request->isAJAX()) {
+            $msg = [
+                'data' => view('pegawai/formtambahbanyak')
+            ];
+            echo json_encode($msg);
+        } else {
+            exit('Maaf Tidak dapat diproses');
+        }
+    }
+
+    public function simpanbanyak()
+    {
+        if ($this->request->isAJAX()) {
+            $ktp = $this->request->getVar('ktp');
+            $nama = $this->request->getVar('nama');
+            $jk = $this->request->getVar('jk');
+            $tgl_lahir = $this->request->getVar('tgl_lahir');
+            $alamat = $this->request->getVar('alamat');
+            $no_telp = $this->request->getVar('no_telp');
+
+            $jmldata = count($ktp);
+
+            for ($i = 0; $i < $jmldata; $i++) {
+                $this->peg->insert([
+                    'no_ktp' => $ktp[$i],
+                    'nama' => $nama[$i],
+                    'jenis_kelamin' => $jk[$i],
+                    'tgl_lahir' => $tgl_lahir[$i],
+                    'alamat' => $alamat[$i],
+                    'no_telp' => $no_telp[$i]
+                ]);
+            };
+
+            $msg = [
+                'sukses' => "$jmldata Data Berhasil Disimpan"
             ];
             echo json_encode($msg);
         } else {
