@@ -40,7 +40,11 @@
 <script type="text/javascript">
     function datakeranjang() {
         $.ajax({
+<<<<<<< HEAD
             url: "<?= site_url('penjualan/ambildata') ?>",
+=======
+            url: "<?= site_url('penjualan/ambildatakeranjang') ?>",
+>>>>>>> 189a9a737764f9a7ded3cfb6eb4bcbb2d126df25
             dataType: "json",
             success: function(response) {
                 $('.viewdata').html(response.data);

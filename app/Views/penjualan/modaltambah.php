@@ -8,53 +8,20 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
+<<<<<<< HEAD
             <?= form_open('keranjang/simpandata', ['class' => 'formkeranjang']) ?>
+=======
+            <?= form_open('penjualan/simpankeranjang', ['class' => 'formpenjualan']) ?>
+>>>>>>> 189a9a737764f9a7ded3cfb6eb4bcbb2d126df25
             <?= csrf_field(); ?>
             <div class="modal-body">
                 <div class="card-body">
-                    <div class="form-group row">
-                        <label for="nama" class="col-sm-3 col-form-label">Nama</label>
-                        <div class="col-sm-9">
-                            <input class="form-control" type="text" id="nama" name="nama">
-                            <div class="invalid-feedback errorNama">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="satuan" class="col-sm-3 col-form-label">Satuan</label>
-                        <div class="col-sm-3">
-                            <select class="select2 form-control mb-6 custom-select" style="width: 100%;" id="satuan" name="satuan">
-                                <option selected value="">Pilih Satuan</option>
-                                <option value="PCS">PCS</option>
-                                <option value="BOTOL">BOTOL</option>
-                                <option value="TUBE">TUBE</option>
-                                <option value="STRIP">STRIP</option>
-                                <option value="TABLET">TABLET</option>
-                                <option value="PACK">PACK</option>
-                                <option value="BOX">BOX</option>
-                                <option value="CAP">CAP</option>
-                                <option value="KAPS">KAPS</option>
-                                <option value="SCT">SCT</option>
-                                <option value="POT">POT</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="harga" class="col-sm-3 col-form-label">Harga</label>
-                        <div class="col-sm-3">
-                            <input class="form-control" type="text" id="harga" name="harga">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="stok" class="col-sm-3 col-form-label">STOK</label>
-                        <div class="col-sm-3">
-                            <input class="form-control" type="text" id="stok" name="stok">
-                        </div>
-                    </div>
+
+
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="submit" class="btn btn-primary btn_simpan">Simpan Data</button>
+                <button type="submit" class="btn btn-primary btn_simpan">Tambah Produk</button>
             </div>
 
             <? form_close() ?>
@@ -66,7 +33,11 @@
 
 <script>
     $(document).ready(function() {
+<<<<<<< HEAD
         $('.formkeranjang').submit(function(e) {
+=======
+        $('.formpenjualan').submit(function(e) {
+>>>>>>> 189a9a737764f9a7ded3cfb6eb4bcbb2d126df25
             e.preventDefault();
             $.ajax({
                 type: "post",
@@ -79,9 +50,10 @@
                 },
                 complete: function() {
                     $('.btn_simpan').removeAttr('disable');
-                    $('.btn_simpan').html('Simpan Data');
+                    $('.btn_simpan').html('Tambah Produk');
                 },
                 success: function(response) {
+<<<<<<< HEAD
                     if (response.error) {
                         if (response.error.nama) {
                             $('#nama').addClass('is-invalid');
@@ -99,6 +71,15 @@
                         $('#modaltambah').modal('hide');
                         datakeranjang();
                     }
+=======
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Berhasil',
+                        text: response.sukses,
+                    })
+                    $('#modaltambah').modal('hide');
+                    datakeranjang();
+>>>>>>> 189a9a737764f9a7ded3cfb6eb4bcbb2d126df25
                 },
 
                 error: function(xhr, ajaxOptions, thorwnError) {

@@ -12,10 +12,10 @@
                 <input type="checkbox" id="centangSemua">
             </th>
             <th>No</th>
-            <th>Nama</th>
-            <th>Satuan</th>
+            <th>Nama Obat</th>
+            <th>Jumlah</th>
             <th>Harga</th>
-            <th>Stok</th>
+            <th>Sub Total</th>
             <th>Aksi</th>
         </tr>
     </thead>
@@ -26,20 +26,17 @@
             $nomor++;
         ?>
             <tr>
-                <td style="display: none;"><?= $row['id'] ?></td>
+                <td style="display: none;"><?= $row['no_struk'] ?></td>
                 <td>
-                    <input type="checkbox" id="centangid" name="id[]" class="centangid" value="<?= $row['id'] ?>">
+                    <input type="checkbox" id="centangid" name="id[]" class="centangid" value="<?= $row['no_struk'] ?>">
                 </td>
                 <td><?= $nomor ?></td>
                 <td><?= $row['nama'] ?></td>
-                <td><?= $row['satuan'] ?></td>
+                <td><?= $row['qty'] ?></td>
                 <td><?= $row['harga'] ?></td>
-                <td><?= $row['stok'] ?></td>
+                <td><?= $row['sub_total'] ?></td>
                 <td>
-                    <button type="button" class="btn btn-info btn-sm" onclick="edit('<?= $row['id'] ?>')">
-                        <i class="fa fa-tags"></i>
-                    </button>
-                    <button type="button" class="btn btn-danger btn-sm" onclick="hapus('<?= $row['id'] ?>')">
+                    <button type="button" class="btn btn-danger btn-sm" onclick="hapus('<?= $row['no_struk'] ?>')">
                         <i class="fa fa-trash"></i>
                     </button>
                 </td>
@@ -111,6 +108,7 @@
         });
     });
 
+<<<<<<< HEAD
     function edit(id) {
         $.ajax({
             type: "post",
@@ -131,6 +129,8 @@
         });
     }
 
+=======
+>>>>>>> 189a9a737764f9a7ded3cfb6eb4bcbb2d126df25
     function hapus(id) {
         Swal.fire({
             title: 'Yakin mau dihapus?',
