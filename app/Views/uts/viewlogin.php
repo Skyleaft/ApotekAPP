@@ -42,7 +42,7 @@
                 <div class="col-lg-4 col-md-6 col-12 order-lg-2 min-vh-100 order-2 bg-white">
                     <div class="p-4 m-3">
                         <a href="<?= site_url('uts') ?>">
-                            <img src="<?= base_url() ?>/assets/images/logo-icon.png" alt="logo" width="110" class="shadow-light rounded-circle mb-5 mt-2" style="margin-left: auto;margin-right: auto;display: block;">
+                            <img src="<?= base_url() ?>/assets/images/logo-icon.png" alt="logo" width="110" class=" mb-5 mt-2" style="margin-left: auto;margin-right: auto;display: block;">
                         </a>
                         <h4 class="text-dark font-weight-normal">Halaman Login <span class="font-weight-bold">Apotek APP</span></h4>
                         <?= form_open('login/cekuser', ['class' => 'formlogin']) ?>

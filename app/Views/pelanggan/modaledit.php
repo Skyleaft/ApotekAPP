@@ -3,22 +3,16 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Edit Data Pegawai</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Edit Data Pelanggan</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <?= form_open('pegawai/updatedata', ['class' => 'formpegawai']) ?>
+            <?= form_open('pelanggan/updatedata', ['class' => 'formpelanggan']) ?>
             <?= csrf_field(); ?>
             <input style="display: none;;" type="text" id="id" name="id" value="<?= $id  ?>" readonly>
             <div class="modal-body">
                 <div class="card-body">
-                    <div class="form-group row">
-                        <label for="ktp" class="col-sm-3 col-form-label">Nomor KTP</label>
-                        <div class="col-sm-9">
-                            <input class="form-control" type="text" id="ktp" name="ktp" value="<?= $no_ktp  ?>" readonly>
-                        </div>
-                    </div>
                     <div class="form-group row">
                         <label for="nama" class="col-sm-3 col-form-label">Nama</label>
                         <div class="col-sm-9">
@@ -72,7 +66,7 @@
 
 <script>
     $(document).ready(function() {
-        $('.formpegawai').submit(function(e) {
+        $('.formpelanggan').submit(function(e) {
             e.preventDefault();
             $.ajax({
                 type: "post",
@@ -94,7 +88,7 @@
                         text: response.sukses,
                     })
                     $('#modaledit').modal('hide');
-                    datapegawai();
+                    datapelanggan();
                 },
 
                 error: function(xhr, ajaxOptions, thorwnError) {

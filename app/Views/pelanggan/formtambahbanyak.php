@@ -1,4 +1,4 @@
-<?= form_open('pegawai/simpanbanyak', ['class' => 'formsimpanbanyak']); ?>
+<?= form_open('pelanggan/simpanbanyak', ['class' => 'formsimpanbanyak']); ?>
 <?= csrf_field(); ?>
 <p class="mb-2">
     <button type="button" class="btn btn-warning btnback ">
@@ -11,7 +11,6 @@
 <table class=" table">
     <thead>
         <tr>
-            <th>Nomor KTP</th>
             <th>Nama</th>
             <th>Jenis Kelamin</th>
             <th>Tanggal Lahir</th>
@@ -23,8 +22,6 @@
 
     <tbody class="formtambah">
         <tr>
-            <td>
-                <input class="form-control" type="text" id="ktp" name="ktp[]"></td>
             <td>
                 <input class="form-control" type="text" id="nama" name="nama[]"></td>
             <td>
@@ -63,8 +60,6 @@
             $('.formtambah').append(`
             <tr>
             <td>
-                <input class="form-control" type="text" id="ktp" name="ktp[]"></td>
-            <td>
                 <input class="form-control" type="text" id="nama" name="nama[]"></td>
             <td>
                 <select class="select2 form-control mb-6 custom-select" style="width: 100%;" id="jk" name="jk[]">
@@ -83,8 +78,8 @@
                 <input class="form-control" type="text" id="no_telp" name="no_telp[]">
             </td>
             <td>
-                <button type="button" class="btn btn-danger btnhapus">
-                    <i class="fa fa-trash"></i>
+                <button type="button" class="btn btn-primary btnaddform">
+                    <i class="fa fa-plus"></i>
                 </button>
             </td>
         </tr>
@@ -93,7 +88,7 @@
 
         $('.btnback').click(function(e) {
             e.preventDefault();
-            datapegawai();
+            datapelanggan();
         });
 
         $('.formsimpanbanyak').submit(function(e) {
@@ -119,7 +114,7 @@
                             text: `${response.sukses}`,
                         }).then((result) => {
                             if (result.value) {
-                                window.location.href = ("<?= site_url('pegawai/index'); ?>");
+                                window.location.href = ("<?= site_url('pelanggan/index'); ?>");
                             }
                         });
                     }

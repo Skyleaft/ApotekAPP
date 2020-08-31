@@ -52,7 +52,7 @@
                             <!-- Logo -->
                             <div class="col-xl-2 col-lg-2">
                                 <div class="logo">
-                                    <a href="<?= site_url('home') ?>"><img src="<?= base_url() ?>/assets/appli/img/logo/logo.png" alt="" width="150"></a>
+                                    <a href="<?= site_url('home') ?>"><img src="<?= base_url() ?>/assets/appli/img/logo/logo.png" alt="" width="170"></a>
                                 </div>
                             </div>
                             <div class="col-xl-10 col-lg-10">

@@ -13,7 +13,7 @@
 <div class="row">
     <div class="col-sm-12">
         <div class="page-title-box">
-            <h4 class="page-title">Data Pegawai</h4>
+            <h4 class="page-title">Data Pelanggan</h4>
         </div>
     </div>
 </div>
@@ -41,9 +41,9 @@
 </div>
 
 <script type="text/javascript">
-    function datapegawai() {
+    function datapelanggan() {
         $.ajax({
-            url: "<?= site_url('pegawai/ambildata') ?>",
+            url: "<?= site_url('pelanggan/ambildata') ?>",
             dataType: "json",
             success: function(response) {
                 $('.viewdata').html(response.data);
@@ -55,11 +55,11 @@
     }
 
     $(document).ready(function() {
-        datapegawai();
+        datapelanggan();
 
         $('.tambah').click(function(e) {
             $.ajax({
-                url: "<?= site_url('pegawai/formtambah') ?>",
+                url: "<?= site_url('pelanggan/formtambah') ?>",
                 dataType: "json",
                 success: function(response) {
                     $('.viewmodal').html(response.data).show();
@@ -74,7 +74,7 @@
 
         $('.tambahbanyak').click(function(e) {
             $.ajax({
-                url: "<?= site_url('pegawai/formtambahbanyak') ?>",
+                url: "<?= site_url('pelanggan/formtambahbanyak') ?>",
                 dataType: "json",
                 beforeSend: function() {
                     $('.viewdata').html('<i class="fas fa-spin fa-spinner"></i>')

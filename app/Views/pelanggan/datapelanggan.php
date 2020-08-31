@@ -1,10 +1,10 @@
-<?= form_open('pegawai/hapusbanyak', ['class' => 'formhapusbanyak']); ?>
+<?= form_open('pelanggan/hapusbanyak', ['class' => 'formhapusbanyak']); ?>
 <?= csrf_field(); ?>
 <button type="submit" class="btn btn-danger btnhapus mb-3">
     <i class="fas fa-trash"></i> Hapus Banyak Data
 </button>
 
-<table class="table" id="datapegawai">
+<table class="table" id="datapelanggan">
     <thead>
         <tr>
             <th style="display: none;"></th>
@@ -12,7 +12,6 @@
                 <input type="checkbox" id="centangSemua">
             </th>
             <th>No</th>
-            <th>Nomor KTP</th>
             <th>Nama</th>
             <th>Jenis Kelamin</th>
             <th>Tanggal Lahir</th>
@@ -33,7 +32,6 @@
                     <input type="checkbox" id="centangid" name="id[]" class="centangid" value="<?= $row['id'] ?>">
                 </td>
                 <td><?= $nomor ?></td>
-                <td><?= $row['no_ktp'] ?></td>
                 <td><?= $row['nama'] ?></td>
                 <td><?= $row['jenis_kelamin'] ?></td>
                 <td><?= $row['tgl_lahir'] ?></td>
@@ -57,7 +55,7 @@
 
 <script type="text/javascript">
     $(document).ready(function() {
-        $('#datapegawai').DataTable();
+        $('#datapelanggan').DataTable();
 
         $('#centangSemua').click(function(e) {
             if ($(this).is(':checked')) {
@@ -100,7 +98,7 @@
                                         title: 'Berhasil',
                                         text: response.sukses,
                                     });
-                                    datapegawai();
+                                    datapelanggan();
                                 }
                             },
                             error: function(xhr, ajaxOptions, thorwnError) {
@@ -118,7 +116,7 @@
     function edit(id) {
         $.ajax({
             type: "post",
-            url: "<?= site_url('pegawai/formedit') ?>",
+            url: "<?= site_url('pelanggan/formedit') ?>",
             data: {
                 id: id
             },
@@ -148,7 +146,7 @@
             if (result.value) {
                 $.ajax({
                     type: "post",
-                    url: "<?= site_url('pegawai/hapus') ?>",
+                    url: "<?= site_url('pelanggan/hapus') ?>",
                     data: {
                         id: id
                     },
@@ -160,7 +158,7 @@
                                 title: 'Berhasil',
                                 text: response.sukses,
                             });
-                            datapegawai();
+                            datapelanggan();
                         }
                     },
                     error: function(xhr, ajaxOptions, thorwnError) {
