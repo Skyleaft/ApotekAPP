@@ -1,10 +1,10 @@
-<?= form_open('obat/hapusbanyak', ['class' => 'formhapusbanyak']); ?>
+<?= form_open('penjualan/hapusbanyak', ['class' => 'formhapusbanyak']); ?>
 <?= csrf_field(); ?>
 <button type="submit" class="btn btn-danger btnhapus mb-3">
     <i class="fas fa-trash"></i> Hapus Banyak Data
 </button>
 
-<table class="table" id="dataobat">
+<table class="table" id="datapenjualan">
     <thead>
         <tr>
             <th style="display: none;"></th>
@@ -12,10 +12,10 @@
                 <input type="checkbox" id="centangSemua">
             </th>
             <th>No</th>
-            <th>Nama</th>
-            <th>Satuan</th>
+            <th>Nama Obat</th>
+            <th>Jumlah</th>
             <th>Harga</th>
-            <th>Stok</th>
+            <th>Sub Total</th>
             <th>Aksi</th>
         </tr>
     </thead>
@@ -26,20 +26,17 @@
             $nomor++;
         ?>
             <tr>
-                <td style="display: none;"><?= $row['id'] ?></td>
+                <td style="display: none;"><?= $row['no_struk'] ?></td>
                 <td>
-                    <input type="checkbox" id="centangid" name="id[]" class="centangid" value="<?= $row['id'] ?>">
+                    <input type="checkbox" id="centangid" name="id[]" class="centangid" value="<?= $row['no_struk'] ?>">
                 </td>
                 <td><?= $nomor ?></td>
                 <td><?= $row['nama'] ?></td>
-                <td><?= $row['satuan'] ?></td>
+                <td><?= $row['qty'] ?></td>
                 <td><?= $row['harga'] ?></td>
-                <td><?= $row['stok'] ?></td>
+                <td><?= $row['sub_total'] ?></td>
                 <td>
-                    <button type="button" class="btn btn-info btn-sm" onclick="edit('<?= $row['id'] ?>')">
-                        <i class="fa fa-tags"></i>
-                    </button>
-                    <button type="button" class="btn btn-danger btn-sm" onclick="hapus('<?= $row['id'] ?>')">
+                    <button type="button" class="btn btn-danger btn-sm" onclick="hapus('<?= $row['no_struk'] ?>')">
                         <i class="fa fa-trash"></i>
                     </button>
                 </td>
@@ -53,7 +50,7 @@
 
 <script type="text/javascript">
     $(document).ready(function() {
-        $('#dataobat').DataTable();
+        $('#datapenjualan').DataTable();
 
         $('#centangSemua').click(function(e) {
             if ($(this).is(':checked')) {
@@ -96,7 +93,7 @@
                                         title: 'Berhasil',
                                         text: response.sukses,
                                     });
-                                    dataobat();
+                                    datapenjualan();
                                 }
                             },
                             error: function(xhr, ajaxOptions, thorwnError) {
@@ -111,26 +108,6 @@
         });
     });
 
-    function edit(id) {
-        $.ajax({
-            type: "post",
-            url: "<?= site_url('obat/formedit') ?>",
-            data: {
-                id: id
-            },
-            dataType: "json",
-            success: function(response) {
-                if (response.sukses) {
-                    $('.viewmodal').html(response.sukses).show();
-                    $('#modaledit').modal('show');
-                }
-            },
-            error: function(xhr, ajaxOptions, thorwnError) {
-                alert(xhr.status + "\n" + xhr.responseText + "\n" + thorwnError);
-            }
-        });
-    }
-
     function hapus(id) {
         Swal.fire({
             title: 'Yakin mau dihapus?',
@@ -144,7 +121,7 @@
             if (result.value) {
                 $.ajax({
                     type: "post",
-                    url: "<?= site_url('obat/hapus') ?>",
+                    url: "<?= site_url('penjualan/hapus') ?>",
                     data: {
                         id: id
                     },
@@ -156,7 +133,7 @@
                                 title: 'Berhasil',
                                 text: response.sukses,
                             });
-                            dataobat();
+                            datapenjualan();
                         }
                     },
                     error: function(xhr, ajaxOptions, thorwnError) {

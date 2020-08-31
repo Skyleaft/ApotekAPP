@@ -13,7 +13,7 @@
 <div class="row">
     <div class="col-sm-12">
         <div class="page-title-box">
-            <h4 class="page-title">Data Obat</h4>
+            <h4 class="page-title">Data Penjualan</h4>
         </div>
     </div>
 </div>
@@ -23,10 +23,7 @@
         <div class="card-body table-responsive">
             <div class="card-title">
                 <button class="btn btn-primary btn-sm tambah">
-                    <i class="fas fa-plus-circle"></i> Tambah Data
-                </button>
-                <button class="btn btn-info btn-sm tambahbanyak">
-                    <i class="fas fa-plus-circle"></i> Tambah Banyak Data
+                    <i class="fas fa-plus-circle"></i> Tambah Produk
                 </button>
             </div>
             <p class="card-text viewdata">
@@ -41,9 +38,9 @@
 </div>
 
 <script type="text/javascript">
-    function dataobat() {
+    function datakeranjang() {
         $.ajax({
-            url: "<?= site_url('obat/ambildata') ?>",
+            url: "<?= site_url('penjualan/ambildatakeranjang') ?>",
             dataType: "json",
             success: function(response) {
                 $('.viewdata').html(response.data);
@@ -55,11 +52,11 @@
     }
 
     $(document).ready(function() {
-        dataobat();
+        datakeranjang();
 
         $('.tambah').click(function(e) {
             $.ajax({
-                url: "<?= site_url('obat/formtambah') ?>",
+                url: "<?= site_url('penjualan/formtambah') ?>",
                 dataType: "json",
                 success: function(response) {
                     $('.viewmodal').html(response.data).show();
@@ -72,22 +69,6 @@
             });
         });
 
-        $('.tambahbanyak').click(function(e) {
-            $.ajax({
-                url: "<?= site_url('obat/formtambahbanyak') ?>",
-                dataType: "json",
-                beforeSend: function() {
-                    $('.viewdata').html('<i class="fas fa-spin fa-spinner"></i>')
-                },
-                success: function(response) {
-                    $('.viewdata').html(response.data).show();
-
-                },
-                error: function(xhr, ajaxOptions, thorwnError) {
-                    alert(xhr.status + "\n" + xhr.responseText + "\n" + thorwnError);
-                }
-            });
-        });
     });
 </script>
 

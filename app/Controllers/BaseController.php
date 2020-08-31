@@ -18,6 +18,8 @@ namespace App\Controllers;
 use App\Models\ObatModel;
 use App\Models\PegawaiModel;
 use App\Models\PelangganModel;
+use App\Models\PenjualanModel;
+use App\Models\DetailPenjualanModel;
 use CodeIgniter\Controller;
 
 class BaseController extends Controller
@@ -49,5 +51,7 @@ class BaseController extends Controller
 		$this->peg = new PegawaiModel;
 		$this->obt = new ObatModel;
 		$this->pel = new PelangganModel;
+		$this->penj = new PenjualanModel;
+		$this->dpenj = new DetailPenjualanModel;
 	}
 }
