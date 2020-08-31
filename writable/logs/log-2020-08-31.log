@@ -31,3 +31,13 @@ CRITICAL - 2020-08-31 01:00:49 --> Invalid argument supplied for foreach()
 #7 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
 #9 {main}
+CRITICAL - 2020-08-31 04:20:15 --> Invalid file: layout/under.php
+#0 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout/under.ph...')
+#1 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Common.php(1119): CodeIgniter\View\View->render('layout/under', Array, true)
+#2 C:\xampp\htdocs\ApotekAPP\app\Controllers\Pembelian.php(9): view('layout/under')
+#3 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Pembelian->index()
+#4 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembelian))
+#5 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\ApotekAPP\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\ApotekAPP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#8 {main}
