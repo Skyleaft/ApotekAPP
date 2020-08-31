@@ -8,7 +8,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <?= form_open('obat/simpandata', ['class' => 'formobat']) ?>
+            <?= form_open('keranjang/simpandata', ['class' => 'formkeranjang']) ?>
             <?= csrf_field(); ?>
             <div class="modal-body">
                 <div class="card-body">
@@ -66,7 +66,7 @@
 
 <script>
     $(document).ready(function() {
-        $('.formobat').submit(function(e) {
+        $('.formkeranjang').submit(function(e) {
             e.preventDefault();
             $.ajax({
                 type: "post",
@@ -97,7 +97,7 @@
                             text: response.sukses,
                         })
                         $('#modaltambah').modal('hide');
-                        dataobat();
+                        datakeranjang();
                     }
                 },
 

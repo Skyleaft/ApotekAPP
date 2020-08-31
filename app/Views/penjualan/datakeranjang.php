@@ -1,10 +1,10 @@
-<?= form_open('obat/hapusbanyak', ['class' => 'formhapusbanyak']); ?>
+<?= form_open('penjualan/hapusbanyak', ['class' => 'formhapusbanyak']); ?>
 <?= csrf_field(); ?>
 <button type="submit" class="btn btn-danger btnhapus mb-3">
     <i class="fas fa-trash"></i> Hapus Banyak Data
 </button>
 
-<table class="table" id="dataobat">
+<table class="table" id="datapenjualan">
     <thead>
         <tr>
             <th style="display: none;"></th>
@@ -53,7 +53,7 @@
 
 <script type="text/javascript">
     $(document).ready(function() {
-        $('#dataobat').DataTable();
+        $('#datapenjualan').DataTable();
 
         $('#centangSemua').click(function(e) {
             if ($(this).is(':checked')) {
@@ -96,7 +96,7 @@
                                         title: 'Berhasil',
                                         text: response.sukses,
                                     });
-                                    dataobat();
+                                    datapenjualan();
                                 }
                             },
                             error: function(xhr, ajaxOptions, thorwnError) {
@@ -114,7 +114,7 @@
     function edit(id) {
         $.ajax({
             type: "post",
-            url: "<?= site_url('obat/formedit') ?>",
+            url: "<?= site_url('penjualan/formedit') ?>",
             data: {
                 id: id
             },
@@ -144,7 +144,7 @@
             if (result.value) {
                 $.ajax({
                     type: "post",
-                    url: "<?= site_url('obat/hapus') ?>",
+                    url: "<?= site_url('penjualan/hapus') ?>",
                     data: {
                         id: id
                     },
@@ -156,7 +156,7 @@
                                 title: 'Berhasil',
                                 text: response.sukses,
                             });
-                            dataobat();
+                            datapenjualan();
                         }
                     },
                     error: function(xhr, ajaxOptions, thorwnError) {
