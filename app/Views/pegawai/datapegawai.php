@@ -1,7 +1,16 @@
+<?= form_open('pegawai/hapusbanyak', ['class' => 'formhapusbanyak']); ?>
+<?= csrf_field(); ?>
+<button type="submit" class="btn btn-danger btnhapus mb-3">
+    <i class="fas fa-trash"></i> Hapus Banyak Data
+</button>
+
 <table class="table" id="datapegawai">
     <thead>
         <tr>
             <th style="display: none;"></th>
+            <th>
+                <input type="checkbox" id="centangSemua">
+            </th>
             <th>No</th>
             <th>Nomor KTP</th>
             <th>Nama</th>
@@ -20,6 +29,9 @@
         ?>
             <tr>
                 <td style="display: none;"><?= $row['id'] ?></td>
+                <td>
+                    <input type="checkbox" id="centangid" name="id[]" class="centangid" value="<?= $row['id'] ?>">
+                </td>
                 <td><?= $nomor ?></td>
                 <td><?= $row['no_ktp'] ?></td>
                 <td><?= $row['nama'] ?></td>
@@ -41,9 +53,66 @@
     </tbody>
 </table>
 
+<?= form_close() ?>
+
 <script type="text/javascript">
     $(document).ready(function() {
         $('#datapegawai').DataTable();
+
+        $('#centangSemua').click(function(e) {
+            if ($(this).is(':checked')) {
+                $('.centangid').prop('checked', true);
+            } else {
+                $('.centangid').prop('checked', false);
+            }
+        });
+
+        $('.formhapusbanyak').submit(function(e) {
+            e.preventDefault();
+            let jmldata = $('.centangid:checked');
+
+            if (jmldata.length === 0) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Perhatian',
+                    text: 'Maaf Silahkan pilih data yang mau dihapus',
+                });
+            } else {
+                Swal.fire({
+                    title: 'Yakin mau dihapus?',
+                    text: `${jmldata.length} data akan dihapus!!`,
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#d33',
+                    cancelButtonColor: '#3085d6',
+                    confirmButtonText: 'Ya'
+                }).then((result) => {
+                    if (result.value) {
+                        $.ajax({
+                            type: "post",
+                            url: $(this).attr('action'),
+                            data: $(this).serialize(),
+                            dataType: "json",
+                            success: function(response) {
+                                if (response.sukses) {
+                                    Swal.fire({
+                                        icon: 'success',
+                                        title: 'Berhasil',
+                                        text: response.sukses,
+                                    });
+                                    datapegawai();
+                                }
+                            },
+                            error: function(xhr, ajaxOptions, thorwnError) {
+                                alert(xhr.status + "\n" + xhr.responseText + "\n" + thorwnError);
+                            }
+                        });
+                    }
+                })
+            }
+
+            return false;
+        });
     });
 
     function edit(id) {
@@ -90,7 +159,7 @@
                                 icon: 'success',
                                 title: 'Berhasil',
                                 text: response.sukses,
-                            })
+                            });
                             datapegawai();
                         }
                     },
@@ -99,6 +168,6 @@
                     }
                 });
             }
-        })
+        });
     }
 </script>

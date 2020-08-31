@@ -15,6 +15,7 @@ namespace App\Controllers;
  * @package CodeIgniter
  */
 
+use App\Models\ObatModel;
 use App\Models\PegawaiModel;
 use CodeIgniter\Controller;
 
@@ -45,5 +46,6 @@ class BaseController extends Controller
 		$this->session = \Config\Services::session();
 
 		$this->peg = new PegawaiModel;
+		$this->obt = new ObatModel;
 	}
 }

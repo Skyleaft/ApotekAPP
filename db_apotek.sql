@@ -1,17 +1,17 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : localhost 3306
+ Source Server         : localhost_3306
  Source Server Type    : MySQL
- Source Server Version : 100414
+ Source Server Version : 100413
  Source Host           : localhost:3306
  Source Schema         : db_apotek
 
  Target Server Type    : MySQL
- Target Server Version : 100414
+ Target Server Version : 100413
  File Encoding         : 65001
 
- Date: 31/08/2020 03:01:07
+ Date: 31/08/2020 14:19:33
 */
 
 SET NAMES utf8mb4;
@@ -573,7 +573,7 @@ CREATE TABLE `pegawai`  (
   `alamat` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `no_telp` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 15 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of pegawai
@@ -584,6 +584,10 @@ INSERT INTO `pegawai` VALUES (3, '321874373765', 'Cika Ariani Putri', 'P', '1994
 INSERT INTO `pegawai` VALUES (4, '321233331255', 'Dina Triani', 'P', '1995-06-20', 'jl. sekeloa 33', '0225121231111');
 INSERT INTO `pegawai` VALUES (5, '321677571212', 'Doni Putra', 'L', '2000-04-18', 'jl. sukamaju 12', '083322552131');
 INSERT INTO `pegawai` VALUES (8, '222115534634', 'Dani Maulana', 'L', '2020-08-11', 'jl. panembakan 32', '0812345212152');
+INSERT INTO `pegawai` VALUES (11, '123123', 'asd', 'L', '2020-08-09', 'qweqwe', '089123122312');
+INSERT INTO `pegawai` VALUES (12, '2424242', 'hfhrhrhr', 'P', '2020-08-19', 'asdadawda', '3523232');
+INSERT INTO `pegawai` VALUES (13, '111', 'asdad', 'P', '2020-07-30', 'qweqwe', '2252525');
+INSERT INTO `pegawai` VALUES (14, '222', 'rtrtrt', 'L', '2020-08-12', 'asdadawda', '555522');
 
 -- ----------------------------
 -- Table structure for pelanggan

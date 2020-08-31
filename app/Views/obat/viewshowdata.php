@@ -21,42 +21,73 @@
 <div class="col-sm-12">
     <div class="card m-b-30">
         <div class="card-body table-responsive">
-            <p class="card-text">
-                <table class="table" id="dataobat">
-                    <thead>
-                        <tr>
-                            <th>No</th>
-                            <th>Nama</th>
-                            <th>Satuan</th>
-                            <th>Harga</th>
+            <div class="card-title">
+                <button class="btn btn-primary btn-sm tambah">
+                    <i class="fas fa-plus-circle"></i> Tambah Data
+                </button>
+                <button class="btn btn-info btn-sm tambahbanyak">
+                    <i class="fas fa-plus-circle"></i> Tambah Banyak Data
+                </button>
+            </div>
+            <p class="card-text viewdata">
 
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <?php $nomor = 0;
-                        foreach ($showdata as $row) :
-                            $nomor++;
-                        ?>
-                            <tr>
-                                <td><?= $nomor ?></td>
-                                <td><?= $row['nama'] ?></td>
-                                <td><?= $row['satuan'] ?></td>
-                                <td><?= $row['harga'] ?></td>
-                            </tr>
-
-                        <?php endforeach; ?>
-                    </tbody>
-                </table>
+            </p>
         </div>
     </div>
 </div>
+
+<div class="viewmodal" style="display: none;"></div>
 </div>
 </div>
 
 <script type="text/javascript">
+    function dataobat() {
+        $.ajax({
+            url: "<?= site_url('obat/ambildata') ?>",
+            dataType: "json",
+            success: function(response) {
+                $('.viewdata').html(response.data);
+            },
+            error: function(xhr, ajaxOptions, thorwnError) {
+                alert(xhr.status + "\n" + xhr.responseText + "\n" + thorwnError);
+            },
+        });
+    }
+
     $(document).ready(function() {
-        $('#dataobat').DataTable();
+        datapegawai();
+
+        $('.tambah').click(function(e) {
+            $.ajax({
+                url: "<?= site_url('pegawai/formtambah') ?>",
+                dataType: "json",
+                success: function(response) {
+                    $('.viewmodal').html(response.data).show();
+
+                    $('#modaltambah').modal('show');
+                },
+                error: function(xhr, ajaxOptions, thorwnError) {
+                    alert(xhr.status + "\n" + xhr.responseText + "\n" + thorwnError);
+                }
+            });
+        });
+
+        $('.tambahbanyak').click(function(e) {
+            $.ajax({
+                url: "<?= site_url('pegawai/formtambahbanyak') ?>",
+                dataType: "json",
+                beforeSend: function() {
+                    $('.viewdata').html('<i class="fas fa-spin fa-spinner"></i>')
+                },
+                success: function(response) {
+                    $('.viewdata').html(response.data).show();
+
+                },
+                error: function(xhr, ajaxOptions, thorwnError) {
+                    alert(xhr.status + "\n" + xhr.responseText + "\n" + thorwnError);
+                }
+            });
+        });
     });
 </script>
 

@@ -201,4 +201,25 @@ class Pegawai extends BaseController
             exit('Maaf Tidak dapat diproses');
         }
     }
+
+    public function hapusbanyak()
+    {
+        if ($this->request->isAJAX()) {
+            $id = $this->request->getVar('id');
+
+            $jmldata = count($id);
+
+            for ($i = 0; $i < $jmldata; $i++) {
+                $this->peg->delete($id[$i]);
+            };
+
+
+            $msg = [
+                'sukses' => "$jmldata Data Berhasil Dihapus"
+            ];
+            echo json_encode($msg);
+        } else {
+            exit('Maaf Tidak dapat diproses');
+        }
+    }
 }
