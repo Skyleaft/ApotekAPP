@@ -114,7 +114,7 @@ class Obat extends BaseController
                 'nama' => $this->request->getVar('nama'),
                 'satuan' => $this->request->getVar('satuan'),
                 'harga' => $this->request->getVar('harga'),
-                'stok' => $this->request->getVar('stok'),
+                'stok' => $this->request->getVar('stok')
             ];
 
             $this->obt->update($id, $simpandata);
@@ -159,26 +159,21 @@ class Obat extends BaseController
     public function simpanbanyak()
     {
         if ($this->request->isAJAX()) {
-            $ktp = $this->request->getVar('ktp');
             $nama = $this->request->getVar('nama');
-            $jk = $this->request->getVar('jk');
-            $tgl_lahir = $this->request->getVar('tgl_lahir');
-            $alamat = $this->request->getVar('alamat');
-            $no_telp = $this->request->getVar('no_telp');
+            $satuan = $this->request->getVar('satuan');
+            $harga = $this->request->getVar('harga');
+            $stok = $this->request->getVar('stok');
 
-            $jmldata = count($ktp);
+            $jmldata = count($nama);
 
             for ($i = 0; $i < $jmldata; $i++) {
                 $this->obt->insert([
-                    'no_ktp' => $ktp[$i],
                     'nama' => $nama[$i],
-                    'jenis_kelamin' => $jk[$i],
-                    'tgl_lahir' => $tgl_lahir[$i],
-                    'alamat' => $alamat[$i],
-                    'no_telp' => $no_telp[$i]
+                    'satuan' => $satuan[$i],
+                    'harga' => $harga[$i],
+                    'stok' => $stok[$i],
                 ]);
             };
-
             $msg = [
                 'sukses' => "$jmldata Data Berhasil Disimpan"
             ];
